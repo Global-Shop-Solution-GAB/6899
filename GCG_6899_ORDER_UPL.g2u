@@ -1,0 +1,2735 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.frmUpload..Create(BaseForm)
+Gui.frmUpload..Caption("Upload")
+Gui.frmUpload..Size(423,131)
+Gui.frmUpload..MinX(0)
+Gui.frmUpload..MinY(0)
+Gui.frmUpload..Position(0,0)
+Gui.frmUpload..AlwaysOnTop(False)
+Gui.frmUpload..FontName("Tahoma")
+Gui.frmUpload..FontSize(8.25)
+Gui.frmUpload..ControlBox(True)
+Gui.frmUpload..MaxButton(False)
+Gui.frmUpload..MinButton(False)
+Gui.frmUpload..MousePointer(0)
+Gui.frmUpload..Moveable(True)
+Gui.frmUpload..Sizeable(True)
+Gui.frmUpload..ShowInTaskBar(True)
+Gui.frmUpload..TitleBar(True)
+Gui.frmUpload..Event(UnLoad,frmUpload_UnLoad)
+Gui.frmUpload.lbl2.Create(Label,"Vendor :",False,50,16,0,324,60,True,0,"Tahoma",7.8,,0,0)
+Gui.frmUpload.lbl2.BorderStyle(0)
+Gui.frmUpload.cmdUpload.Create(Button)
+Gui.frmUpload.cmdUpload.Enabled(True)
+Gui.frmUpload.cmdUpload.Visible(True)
+Gui.frmUpload.cmdUpload.Zorder(0)
+Gui.frmUpload.cmdUpload.Size(94,29)
+Gui.frmUpload.cmdUpload.Position(17,56)
+Gui.frmUpload.cmdUpload.Caption("Upload")
+Gui.frmUpload.cmdUpload.FontName("Tahoma")
+Gui.frmUpload.cmdUpload.FontSize(7.8)
+Gui.frmUpload.cmdUpload.Event(Click,cmdUpload_Click)
+Gui.frmUpload.lbl3.Create(Label,"File :",True,29,16,0,16,21,True,0,"Tahoma",7.8,,0,0)
+Gui.frmUpload.lbl3.BorderStyle(0)
+Gui.frmUpload.txtfile.Create(TextBox,"",True,284,22,0,83,19,True,0,"Tahoma",7.8,,1)
+Gui.frmUpload.txtfile.Locked(True)
+Gui.frmUpload.cmduploadfile.Create(Button)
+Gui.frmUpload.cmduploadfile.Enabled(True)
+Gui.frmUpload.cmduploadfile.Visible(True)
+Gui.frmUpload.cmduploadfile.Zorder(0)
+Gui.frmUpload.cmduploadfile.Size(34,21)
+Gui.frmUpload.cmduploadfile.Position(371,20)
+Gui.frmUpload.cmduploadfile.Caption("^")
+Gui.frmUpload.cmduploadfile.FontName("Tahoma")
+Gui.frmUpload.cmduploadfile.FontSize(7.8)
+Gui.frmUpload.cmduploadfile.Event(Click,cmduploadfile_Click)
+Gui.FormFinish..Create(BaseForm)
+Gui.FormFinish..Caption("Upload Complete")
+Gui.FormFinish..Size(299,191)
+Gui.FormFinish..MinX(0)
+Gui.FormFinish..MinY(0)
+Gui.FormFinish..Position(0,0)
+Gui.FormFinish..AlwaysOnTop(False)
+Gui.FormFinish..FontName("Tahoma")
+Gui.FormFinish..FontSize(8.25)
+Gui.FormFinish..ControlBox(True)
+Gui.FormFinish..MaxButton(True)
+Gui.FormFinish..MinButton(True)
+Gui.FormFinish..MousePointer(0)
+Gui.FormFinish..Moveable(True)
+Gui.FormFinish..Sizeable(True)
+Gui.FormFinish..ShowInTaskBar(True)
+Gui.FormFinish..TitleBar(True)
+Gui.FormFinish..Event(UnLoad,FormFinish_UnLoad)
+Gui.FormFinish.cmdExit.Create(Button)
+Gui.FormFinish.cmdExit.Enabled(True)
+Gui.FormFinish.cmdExit.Visible(True)
+Gui.FormFinish.cmdExit.Zorder(0)
+Gui.FormFinish.cmdExit.Size(75,23)
+Gui.FormFinish.cmdExit.Position(191,78)
+Gui.FormFinish.cmdExit.Caption("EXIT")
+Gui.FormFinish.cmdExit.FontName("Tahoma")
+Gui.FormFinish.cmdExit.FontSize(8.25)
+Gui.FormFinish.cmdExit.Event(Click,cmdExit_Click)
+Gui.FormFinish.cmdViewLog.Create(Button)
+Gui.FormFinish.cmdViewLog.Enabled(True)
+Gui.FormFinish.cmdViewLog.Visible(True)
+Gui.FormFinish.cmdViewLog.Zorder(0)
+Gui.FormFinish.cmdViewLog.Size(96,23)
+Gui.FormFinish.cmdViewLog.Position(32,79)
+Gui.FormFinish.cmdViewLog.Caption("View Event Log")
+Gui.FormFinish.cmdViewLog.FontName("Tahoma")
+Gui.FormFinish.cmdViewLog.FontSize(8.25)
+Gui.FormFinish.cmdViewLog.Event(Click,cmdViewLog_Click)
+Gui.FormFinish.lbl1.Create(Label,"Passed:",True,38,13,0,30,26,True,0,"Tahoma",8.25,,0,0)
+Gui.FormFinish.lbl1.BorderStyle(0)
+Gui.FormFinish.lbl1.DefaultValue("")
+Gui.FormFinish.lbl2.Create(Label,"Failed:",True,32,13,0,35,46,True,0,"Tahoma",8.25,,0,0)
+Gui.FormFinish.lbl2.BorderStyle(0)
+Gui.FormFinish.lblPassed.Create(Label,"",True,1,13,0,73,26,True,0,"Tahoma",8.25,,0,0)
+Gui.FormFinish.lblPassed.BorderStyle(0)
+Gui.FormFinish.lblFailed.Create(Label,"",True,1,13,0,73,46,True,0,"Tahoma",8.25,,0,0)
+Gui.FormFinish.lblFailed.BorderStyle(0)
+Gui.FormFinish.cmdOpenLogFolder.Create(Button)
+Gui.FormFinish.cmdOpenLogFolder.Enabled(True)
+Gui.FormFinish.cmdOpenLogFolder.Visible(True)
+Gui.FormFinish.cmdOpenLogFolder.Zorder(0)
+Gui.FormFinish.cmdOpenLogFolder.Size(96,23)
+Gui.FormFinish.cmdOpenLogFolder.Position(32,120)
+Gui.FormFinish.cmdOpenLogFolder.Caption("Open Log Folder")
+Gui.FormFinish.cmdOpenLogFolder.FontName("Tahoma")
+Gui.FormFinish.cmdOpenLogFolder.FontSize(8.25)
+Gui.FormFinish.cmdOpenLogFolder.Event(Click,cmdOpenLogFolder_Click)
+Gui.FormLog..Create(BaseForm)
+Gui.FormLog..Caption("Form")
+Gui.FormLog..Size(1190,446)
+Gui.FormLog..MinX(0)
+Gui.FormLog..MinY(0)
+Gui.FormLog..Position(0,0)
+Gui.FormLog..AlwaysOnTop(False)
+Gui.FormLog..FontName("Tahoma")
+Gui.FormLog..FontSize(8.25)
+Gui.FormLog..ControlBox(True)
+Gui.FormLog..MaxButton(True)
+Gui.FormLog..MinButton(True)
+Gui.FormLog..MousePointer(0)
+Gui.FormLog..Moveable(True)
+Gui.FormLog..Sizeable(True)
+Gui.FormLog..ShowInTaskBar(True)
+Gui.FormLog..TitleBar(True)
+Gui.FormLog..Event(UnLoad,FormLog_UnLoad)
+Gui.FormLog.GsGcLog.Create(GsGridControl)
+Gui.FormLog.GsGcLog.Enabled(True)
+Gui.FormLog.GsGcLog.Visible(True)
+Gui.FormLog.GsGcLog.Zorder(0)
+Gui.FormLog.GsGcLog.Size(1174,365)
+Gui.FormLog.GsGcLog.Position(8,8)
+Gui.FormLog.GsGcLog.Anchor(15)
+Gui.FormLog.cmdOpenfolderFromLog.Create(Button)
+Gui.FormLog.cmdOpenfolderFromLog.Enabled(True)
+Gui.FormLog.cmdOpenfolderFromLog.Visible(True)
+Gui.FormLog.cmdOpenfolderFromLog.Zorder(0)
+Gui.FormLog.cmdOpenfolderFromLog.Size(92,23)
+Gui.FormLog.cmdOpenfolderFromLog.Position(27,386)
+Gui.FormLog.cmdOpenfolderFromLog.Caption("Open Log Folder")
+Gui.FormLog.cmdOpenfolderFromLog.FontName("Tahoma")
+Gui.FormLog.cmdOpenfolderFromLog.FontSize(8.25)
+Gui.FormLog.cmdOpenfolderFromLog.Event(Click,cmdOpenLogFolder_Click)
+Program.Sub.ScreenSU.End
+
+'ARC 6899
+'Cust: Dewys Manuf
+
+' Sep 2022 - Nam Le
+
+'The customer receives POs from their customers in the form of a PDF and uses a 3rd party solution to extract order information from these POs.  We have determined that ARC ID 6789 will work for them however, it needs to be modified to allow the customer to specify the line numbers in the file.
+
+'This script allow user upload a file to import new SO
+
+
+Program.Sub.Preflight.Start
+v.Global.sWebImporterDir.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+	
+	f.Intrinsic.Control.CallSub(WebImporterPreflight)
+	f.Intrinsic.Control.CallSub(ORDUPLGetWebOrderDirectory)
+	
+	gui.frmUpload..Show
+Program.Sub.Main.End
+
+'ORDUPL subs
+'START
+'########################################
+
+Program.Sub.WebImporterPreflight.Start
+'This lib file assists with using the one shot program ORDUPL. The program uses a text file located in the Global\Files directory to determine whhere to find the files to upload exist. This file has two different possible names. 
+'If there are multiple company codes that all have to have their own file location then GSSPARAMccc.txt will be used. If there is only one location, then GSSPARAM.txt should be used. Only one or the other should exist. 
+'The CORE program will always default to using GSSPARAMccc.txt if it exists. The contents of the GSSPARAM(ccc).txt file should be:
+'
+'WEB ORDER DIRECTORY   = files to be uploaded location
+'WEB ERROR DIRECTORY   = where files are copied to if there is an error
+'WEB CONVERTED DIR     = converted files copied here
+'WEB UPLOADED DIRECTORY= uploaded files copied here
+'EMAIL FROM ADDRESS    = 
+'EMAIL TO ADDRESS      = 
+'
+'In order for this lib file to work these directories must be present.
+
+'Due to the way ORDUPL functions it is not possible to add multiple calls to the datatable like other callwrappers support. It is assumed that there will be 1 row in ORDUPL and 1 row in ORDUPLExtra. Every line in ORDUPLLines will be uploaded
+'with the header and extra data that is provided.
+'
+'The ORDUPL Header datatable is structured as follows:
+'Column					=	Parameter						=	Possible Values
+'=======================================================================================================================
+'Transaction			=	Transaction Code				=	"O" for Sales Order
+'															=	"Q" for Quote
+'CustomerNo				=	Customer Number					=	"000100"
+'OrderNumber			=	Order Number					=	"0000001"
+'Freight				=	Freight							=	"0000000250" 2.50 implied decimal after 8 characters
+'TaxFreightFlag			=	Tax Freight Flag				=	"Y" or Blank
+'FreightPerPiece		=	Freight Per Piece				=	"Y" or Blank
+'OrderDueDate			=	Order Due Date					=	"CCYYMMDD"
+'OrderDate				=	Order Date						=	"CCYYMMDD"
+'UserField1Head			=	User Field 1 Header				=	30 Character String
+'UserField2Head			=	User Field 2 Header				=	30 Character String
+'UserField3Head			=	User Field 3 Header				=	30 Character String
+'UserField4Head			=	User Field 4 Header				=	30 Character String
+'UserField5Head			=	User Field 5 Header				=	30 Character String
+'UserId					=	User ID							=	8 Character String
+'CustomerPO				=	Customer Purchase Order			=	15 Character String
+'Filler1													=	15 Characters
+'FreightCurrFlag		=	Freight Currency Flag			=	"Y" or "N" or Blank
+'DataType				=	DataType						=	"S" for Shipping Data
+'ShipVia				=	Ship Via						=	20 Character String
+'Carrier				=	Carrier							=	6 Character String
+'ShipToName				=	Ship To Name					=	30 Character String
+'ShipToAddress1			=	Ship To Address 1				=	30 Character String
+'ShipToAddress2			=	Ship To Address 2				=	30 Character String
+'ShipToAddress3			=	Ship To Address 3				=	30 Character String
+'ShipToCity				=	Ship To City					=	25 Character String
+'ShipToState			=	Ship To State					=	2 Character String
+'ShipToZip				=	Ship To Zip						=	13 Character String
+'ShipToCountry			=	Ship To Country					=	3 Character String
+'ShipToAttention		=	Ship To Attention				=	30 Character String
+'Filler2													=	11 Characters
+'OrderType				=	Order Type						=	"X" For Invoice
+'															=	Space for Regular
+'															=	"T" for Transfer
+'															=	"B" for Blanket
+'OrderDiscPercentage	=	Order Discount Percentage		=	"04500" - 45% implied decimal after first character
+'Salesman				=	Salesman						=	3 Character String
+'Filler3													=	75 Characters
+'OverrideAutoNumbering	=	Override Auto Numbering			=	"1" to override
+'ShipToID				=	Ship To ID						=	6 Character String
+'MarkShipment			=	Mark Shipment					=	30 Character String
+'ContactName			=	Contact Name					=	30 Character String
+'FromLocation			= 	Order Location					= 	2 Character String
+'CashAmount				=   Cash Amount						=   000000001500000  1.50 implied decimal after 9 characters
+'Project				=   Project							= 	7 Character String
+'Filler4													=	63 Characters
+'=======================================================================================================================
+
+'The ORDUPLExtra datatable is structured as follows:
+'Column					=	Parameter						=	Possible Values
+'=======================================================================================================================
+'ShipToInternationalFlag=	Ship To International Flag		=	"Y" or blank
+'ShipToName				=	Ship To Name					=	40 Character String
+'ShipToAddress1			=	Ship To Address 1				=	40 Character String
+'ShipToAddress2			=	Ship To Address 2				=	40 Character String
+'ShipToAddress3			=	Ship To Address 3				=	40 Character String
+'ShipToAddress4			=	Ship To Address 4				=	40 Character String
+'ShipToAddress5			=	Ship To Address 5				=	40 Character String
+'ShipToCity				=	Ship To City					=	25 Character String
+'ShipToState			=	Ship To State					=	2 Character String
+'ShipToZip				=	Ship To Zip						=	13 Character String
+'ShipToCountry			=	Ship To Country					=	25 Character String
+'ShipToAttention		=	Ship To Attention				=	40 Character String
+'BillToInternationalFlag=	Bill To International Flag		=	"Y" or blank
+'BillToName				=	Bill To Name					=	40 Character String
+'BillToAddress1			=	Bill To Address 1				=	40 Character String
+'BillToAddress2			=	Bill To Address 2				=	40 Character String
+'BillToAddress3			=	Bill To Address 3				=	40 Character String
+'BillToAddress4			=	Bill To Address 4				=	40 Character String
+'BillToAddress5			=	Bill To Address 5				=	40 Character String
+'BillToCity				=	Bill To City					=	25 Character String
+'BillToState			=	Bill To State					=	2 Character String
+'BillToZip				=	Bill To Zip						=	13 Character String
+'BillToCountry			=	Bill To Country					=	25 Character String
+'BillToAttention		=	Bill To Attention				=	40 Character String
+'ContactEmail			=	Contact Email					=	100 Character String
+'ContactPhone			=	Contact Phone					=	20 Character String
+'ExtraTextLine1			=	Text Line 1						=	30 Character String
+'ExtraTextLine2			=	Text Line 2						=	30 Character String
+'ExtraTextLine3			=	Text Line 3						=	30 Character String
+'ExtraTextLine4			=	Text Line 4						=	30 Character String
+'ExtraTextLine5			=	Text Line 5						=	30 Character String
+'ExtraTextLine6			=	Text Line 6						=	30 Character String
+'ExtraTextLine7			=	Text Line 7						=	30 Character String
+'ExtraTextLine8			=	Text Line 8						=	30 Character String
+'ExtraTextLine9			=	Text Line 9						=	30 Character String
+'ExtraTextLine10		=	Text Line 10					=	30 Character String
+'TextPosition			=	Text Position					=	"H" for Header
+'															=	"F" for Footer
+'ApplyTextToSalesOrder	=	Apply Text To SalesOrder		=	"Y" or Blank
+'ApplyTextToPackList	=	Apply Text To Packlist			=	"Y" or Blank
+'ApplyTextToInvoice		=	Apply Text To Invoice			=	"Y" or Blank
+'ApplyTextToQuote		=	Apply Text To Quote				=	"Y" or Blank
+'ApplyTextToRouter		=	Apply Text To Router			=	"Y" or Blank
+'ApplyTextToWO			=	Apply Text To WO				=	"Y" or Blank
+'OrderSort				=	Order Sort						=	20 Characters
+'OrderSort2				=	Order Sort 2					=	20 Characters
+'Filler														=	1960 Characters
+'=======================================================================================================================
+
+'The ORDUPLLines datatable is structured as follows:
+'Column					=	Parameter						=	Possible Values
+'=======================================================================================================================
+'LineNumber				=	Line Number						=	"001" - Line Number 1
+'Filler1													=	1 Character
+'QtyOrdered				=	Quantity Ordered 				=	"0000000010000" - Quantity of 1 implied decimal after 9 characters
+'Weight					=	Weight							=	"0000001000" - Weight of 1 implied decimal after 7 characters
+'UM						=	Unit of Measure					=	2 Character String
+'PartNumber				=	Part Number						=	17 Character String
+'PartRev				=	Part Revision					=	3 Character String
+'Filler2													=	18 Characters
+'PartLoc				=	Part Location					=	2 Character String
+'QuotedPrice			=	Quoted Price					=	"0000000001000000" - Price of 1 implied decimal after 10 characters (if price sent must be in customer's currency)
+'OverridePrice			=	Override Price					=	"0000000001000000" - Price of 1 implied decimal after 10 characters (if price sent must be in customer's currency)
+'Cost					=	Cost							=	"0000000001000000" - Cost of 1 implied decimal after 10 characters (if cost must be in company's currency)
+'PartDesc				=	Part Description				=	30 Character String
+'PL						=	Product Line					=	3 Character String
+'LineOrderDate			=	Line Order Date					=	"CCYYMMDD"
+'LinePromiseDate		=	Line Promise Date				=	"CCYYMMDD"
+'UserField1				=	User Field 1					=	30 Character String
+'UserField2				=	User Field 2					=	30 Character String
+'UserField3				=	User Field 3					=	30 Character String
+'UserField4				=	User Field 4					=	30 Character String
+'UserField5				=	User Field 5					=	30 Character String
+'Extension				=	Extension						=	"0000000001000000" - Extension of 1 implied decimal after 10 characters (If extended amount sent must be in customer's currency)
+'NoDeliveryBeforeDate	=	No Delivery Before Date			=	"CCYYMMDD"
+'MustDeliverByDate		=	Must Deliver By Date			=	"CCYYMMDD"
+'DataType				=	Data Type						=	"T" for sales order Text
+'TextLine1				=	Text Line 1						=	30 Character String
+'TextLine2				=	Text Line 2						=	30 Character String
+'TextLine3				=	Text Line 3						=	30 Character String
+'TextLine4				=	Text Line 4						=	30 Character String
+'TextLine5				=	Text Line 5						=	30 Character String
+'TextLine6				=	Text Line 6						=	30 Character String
+'TextLine7				=	Text Line 7						=	30 Character String
+'TextLine8				=	Text Line 8						=	30 Character String
+'TextLine9				=	Text Line 9						=	30 Character String
+'TextLine10				=	Text Line 10					=	30 Character String
+'TaxStatusFlag			=	Tax Status Flag					=	"E" for Exempt
+'															=	"T" for Taxable
+'LineType				=	Line Type						=	"B" for Buyout
+'															=	"D" for Dropship
+'															=	"S" for Standard
+'															=	"C" for Consignment
+'NegativeFlag			=	Negative Flag					=	"1" Order Quantity is Negative
+'PriceFlag				=	Price Flag						=	"1" Accept Zero Price for Line
+'SufficientInvCheck		=	Sufficient Inventory Check		=	"1" Check to make sure inventory level is sufficient
+'SurveyNo				=	Survey Number					=	"00000001"
+'RouterValFlag			=	Router Validate Flag			=	"V" for Validate
+'															=	"B" for Buyout
+'															=	"N" for No Validate
+'Router					=	Router							=	20 Characters
+'RouterSeq				=	Router Sequence					=	"000001"
+'StockXRef				=	Stock Cross Reference			=	1 Character String
+'OriginalOrd			=	Original Order					=	"0000001"
+'OriginalLine			=	Original Line					=	"001"
+'Length					=	Length							=	"000000010000" - 1 Length implied decimal after 8 characters
+'Width					=	Width							=	"000000010000" - 1 Width implied decimal after 8 characters
+'CurrFlag				=	Currency Flag					=	"Y" Company's Currency
+'															=	Blank Orders Currency
+'OrderDiscPercentage	=	Order Discount Percentage		=	"00500" - 5% implied decimal after the first character
+'Filler3													=	86 Characters
+'=======================================================================================================================
+V.Global.sORDUPLError.Declare(String)
+
+F.Data.DataTable.Create("ORDUPL",True)
+F.Data.DataTable.AddColumn("ORDUPL","Transaction","String","O")
+F.Data.DataTable.AddColumn("ORDUPL","CustomerNo","String","       ")
+F.Data.DataTable.AddColumn("ORDUPL","OrderNumber","String","       ")
+F.Data.DataTable.AddColumn("ORDUPL","Freight","String","0000000000")
+F.Data.DataTable.AddColumn("ORDUPL","TaxFreightFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPL","FreightPerPiece","String"," ")
+F.Data.DataTable.AddColumn("ORDUPL","OrderDueDate","String","00000000")
+F.Data.DataTable.AddColumn("ORDUPL","OrderDate","String","00000000")
+F.Data.DataTable.AddColumn("ORDUPL","UserField1Head","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","UserField2Head","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","UserField3Head","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","UserField4Head","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","UserField5Head","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","UserId","String","        ")
+F.Data.DataTable.AddColumn("ORDUPL","CustomerPO","String","               ")
+F.Data.DataTable.AddColumn("ORDUPL","Filler1","String","               ")
+F.Data.DataTable.AddColumn("ORDUPL","FreightCurrFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPL","DataType","String","S")
+F.Data.DataTable.AddColumn("ORDUPL","ShipVia","String","                     ")
+F.Data.DataTable.AddColumn("ORDUPL","Carrier","String","      ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToName","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToAddress1","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToAddress2","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToAddress3","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToCity","String","                         ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToState","String","  ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToZip","String","             ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToCountry","String","   ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToAttention","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","Filler2","String","           ")
+F.Data.DataTable.AddColumn("ORDUPL","OrderType","String"," ")
+F.Data.DataTable.AddColumn("ORDUPL","OrderDiscPercentage","String","00000")
+F.Data.DataTable.AddColumn("ORDUPL","Salesman","String","   ")
+F.Data.DataTable.AddColumn("ORDUPL","Filler3","String","                                                                           ")
+F.Data.DataTable.AddColumn("ORDUPL","OverrideAutoNumbering","String"," ")
+F.Data.DataTable.AddColumn("ORDUPL","ShipToID","String","      ")
+F.Data.DataTable.AddColumn("ORDUPL","MarkShipment","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","ContactName","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPL","FromLocation","String","  ")
+f.Data.DataTable.AddColumn("ORDUPL","CashAmount","String","000000000000000")
+f.Data.DataTable.AddColumn("ORDUPL","Project","String","       ")
+F.Data.DataTable.AddColumn("ORDUPL","Filler4","String","?")
+
+'ORDUPLExtra
+F.Data.DataTable.Create("ORDUPLExtra",True)
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToInternationalFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToName","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToAddress1","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToAddress2","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToAddress3","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToAddress4","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToAddress5","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToCity","String","                         ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToState","String","  ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToZip","String","             ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToCountry","String","                         ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ShipToAttention","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToInternationalFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToName","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToAddress1","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToAddress2","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToAddress3","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToAddress4","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToAddress5","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToCity","String","                         ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToState","String","  ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToZip","String","             ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToCountry","String","                         ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","BillToAttention","String","                                        ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ContactEmail","String","                                                                                                    ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ContactPhone","String","                    ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine1","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine2","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine3","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine4","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine5","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine6","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine7","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine8","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine9","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ExtraTextLine10","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","TextPosition","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ApplyTextToSalesOrder","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ApplyTextToPackList","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ApplyTextToInvoice","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ApplyTextToQuote","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ApplyTextToRouter","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","ApplyTextToWO","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","OrderSort","String","                    ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","OrderSort2","String","                    ")
+F.Data.DataTable.AddColumn("ORDUPLExtra","Filler","String","                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ")
+
+'ORDUPLLines
+F.Data.DataTable.Create("ORDUPLLines",True)
+F.Data.DataTable.AddColumn("ORDUPLLines","LineNumber","String","   ")
+F.Data.DataTable.AddColumn("ORDUPLLines","Filler1","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","QtyOrdered","String","0000000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","Weight","String","0000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","UM","String","  ")
+F.Data.DataTable.AddColumn("ORDUPLLines","PartNumber","String","                    ")
+F.Data.DataTable.AddColumn("ORDUPLLines","PartRev","String","   ")
+F.Data.DataTable.AddColumn("ORDUPLLines","Filler2","String","                  ")
+F.Data.DataTable.AddColumn("ORDUPLLines","PartLoc","String","  ")
+F.Data.DataTable.AddColumn("ORDUPLLines","QuotedPrice","String","0000000000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","OverridePrice","String","0000000000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","Cost","String","0000000000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","PartDesc","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","PL","String","   ")
+F.Data.DataTable.AddColumn("ORDUPLLines","LineOrderDate","String","        ")
+F.Data.DataTable.AddColumn("ORDUPLLines","LinePromiseDate","String","        ")
+F.Data.DataTable.AddColumn("ORDUPLLines","UserField1","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","UserField2","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","UserField3","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","UserField4","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","UserField5","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","Extension","String","0000000000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","NoDeliveryBeforeDate","String","        ")
+F.Data.DataTable.AddColumn("ORDUPLLines","MustDeliverByDate","String","        ")
+F.Data.DataTable.AddColumn("ORDUPLLines","DataType","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine1","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine2","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine3","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine4","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine5","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine6","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine7","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine8","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine9","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TextLine10","String","                              ")
+F.Data.DataTable.AddColumn("ORDUPLLines","TaxStatusFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","LineType","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","NegativeFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","PriceFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","SufficientInvCheck","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","SurveyNo","String","00000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","RouterValFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","Router","String","                    ")
+F.Data.DataTable.AddColumn("ORDUPLLines","RouterSeq","String","000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","StockXRef","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","OriginalOrd","String","       ")
+F.Data.DataTable.AddColumn("ORDUPLLines","OriginalLine","String","   ")
+F.Data.DataTable.AddColumn("ORDUPLLines","Length","String","000000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","Width","String","000000000000")
+F.Data.DataTable.AddColumn("ORDUPLLines","CurrFlag","String"," ")
+F.Data.DataTable.AddColumn("ORDUPLLines","OrderDiscPercentage","String","00000")
+F.Data.DataTable.AddColumn("ORDUPLLines","Filler3","String","                                                                                      ")
+Program.Sub.WebImporterPreflight.End
+
+'Returns the path to the web order directory stored in gssparamccc.txt/gssparam.txt. If the web order directory doesn't exist it will create it. Return variable is "Path"
+Program.Sub.ORDUPLGetWebOrderDirectory.Start
+F.Intrinsic.Control.Try
+	V.Local.sGSSParamPath.Declare(String)
+	V.Local.sFileContent.Declare(String)
+	V.Local.sWebOrderDirectory.Declare(String)
+	
+	F.Intrinsic.Control.CallSub(ORDUPLGetGSSParamFile)
+	
+	V.Local.sGSSParamPath.Set(V.Args.Filepath)
+	
+	F.Intrinsic.Control.If(V.Local.sGSSParamPath,!=,"FILENOTFOUND")
+		'Here we will have a fully-qualified path to the gssparamccc.txt/gssparam.txt file. We are now going to extract the web order upload directory from the file
+		F.Intrinsic.File.File2String(V.Local.sGSSParamPath,V.Local.sFileContent)
+		
+		F.Intrinsic.String.Split(V.Local.sFileContent,"WEB ORDER DIRECTORY   =",V.Local.sFileContent)
+		F.Intrinsic.String.Split(V.Local.sFileContent(1),V.Ambient.NewLine,V.Local.sFileContent)
+		
+		V.Local.sWebOrderDirectory.Set(V.Local.sFileContent.Trim)
+			
+		'We verify that the directory exists in this sub
+		F.Intrinsic.Control.CallSub(ORDUPLCheckDirectory,"Directory",V.Local.sWebOrderDirectory)
+		
+	F.Intrinsic.Control.Else
+		'If neither gssparam file exists then we need to set the path to FILENOTFOUND to let ORDUPL sub know that no file GSSParam file was found
+		V.Local.sWebOrderDirectory.Set("FILENOTFOUND")
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Variable.AddRV("Path",V.Local.sWebOrderDirectory)
+	'assign to Global Var
+	v.Global.sWebImporterDir.Set(v.Local.sWebOrderDirectory)
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(CatchErrorORDUPL, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ORDUPLGetWebOrderDirectory.End
+
+'Returns the path to GSSParamccc.txt if it exists, GSSParam.txt if it doesn't, and "FILENOTFOUND" if neither are found. Return variable is "Filepath"
+Program.Sub.ORDUPLGetGSSParamFile.Start
+F.Intrinsic.Control.Try
+	V.Local.bFileExist.Declare(Boolean)
+	V.Local.sParamPath.Declare(String)
+	
+	'Check to see if the ccc file exists
+	F.Intrinsic.String.Build("{0}\GSSParam{1}.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Local.sParamPath)
+	F.Intrinsic.File.Exists(V.Local.sParamPath,V.Local.bFileExist)
+	
+	F.Intrinsic.Control.If(V.Local.bFileExist.Not)
+		'If the file does not exist then GSSParam.txt must exist. If it doesn't we need to know and not run ORDUPL as the file is required by ORDUPL
+		F.Intrinsic.String.Build("{0}\GSSParam.txt",V.Caller.FilesDir,V.Local.sParamPath)
+		F.Intrinsic.File.Exists(V.Local.sParamPath,V.Local.bFileExist)
+		
+		F.Intrinsic.Control.If(V.Local.bFileExist.Not)
+			'Here we know that neither gssparamccc.txt nor gssparam.txt exist so we set Filepath to FILENOTFOUND.
+			V.Local.sParamPath.Set("FILENOTFOUND")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Variable.AddRV("Filepath",V.Local.sParamPath)
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(CatchErrorORDUPL, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ORDUPLGetGSSParamFile.End
+
+'Checks to see if a passed directory exists and creates it if it does not
+Program.Sub.ORDUPLCheckDirectory.Start
+F.Intrinsic.Control.Try
+	V.Local.bDirectoryExists.Declare(Boolean)
+	
+	F.Intrinsic.File.PathExists(V.Args.Directory,V.Local.bDirectoryExists)
+	
+	F.Intrinsic.Control.If(V.Local.bDirectoryExists.Not)
+		F.Intrinsic.File.CreateDir(V.Args.Directory)
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(CatchErrorORDUPL, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ORDUPLCheckDirectory.End
+
+Program.Sub.ORDUPLCreateFile.Start
+F.Intrinsic.Control.Try
+	V.Local.sRet.Declare(String)
+	V.Local.iCount.Declare(Long)
+	V.Local.sFileContent.Declare(String)
+	V.Local.sFileName.Declare(String)
+	V.Local.sFilePath.Declare(String)
+	V.Local.sHeader.Declare(String)
+	V.Local.sExtra.Declare(String)
+	V.Local.sDelimiter.Declare(String)
+	V.Local.sDataViewContent.Declare(String)
+	v.Local.sDate.Declare
+	v.Local.sCompanyCode.Declare
+	v.Local.sUser.Declare
+	v.Local.sQuoteNumber.Declare	
+
+	'Here we grab the file path from GSSParamccc.txt (or GSSparam.txt if GSSParamccc.txt does not exist).
+	F.Intrinsic.Control.CallSub(ORDUPLGetWebOrderDirectory)
+	V.Local.sFilePath.Set(V.Args.Path)
+	
+	'If gssparamccc.txt or gssparam.txt is not found we exit the sub
+	F.Intrinsic.Control.If(V.Local.sFilePath,=,"FILENOTFOUND")
+		V.Global.sORDUPLError.Set("FILENOTFOUND")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	'First we are going to pad all the fields that are in the datatables with the data that is already in it.
+	'Header
+	F.Intrinsic.Control.For(V.Local.iCount,0,V.DataTable.ORDUPL.RowCount--,1)
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Transaction!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Transaction",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).CustomerNo!FieldVal," ",7,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"CustomerNo",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPL(V.Local.iCount).OrderNumber!FieldVal,"0",7,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"OrderNumber",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPL(V.Local.iCount).Freight!FieldVal,"0",10,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Freight",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).TaxFreightFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"TaxFreightFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).FreightPerPiece!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"FreightPerPiece",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).OrderDueDate!FieldVal," ",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"OrderDueDate",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).OrderDate!FieldVal," ",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"OrderDate",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).UserField1Head!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"UserField1Head",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).UserField2Head!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"UserField2Head",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).UserField3Head!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"UserField3Head",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).UserField4Head!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"UserField4Head",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).UserField5Head!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"UserField5Head",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).UserId!FieldVal," ",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"UserId",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).CustomerPO!FieldVal," ",15,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"CustomerPO",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Filler1!FieldVal," ",15,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Filler1",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).FreightCurrFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"FreightCurrFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).DataType!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"DataType",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipVia!FieldVal," ",20,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipVia",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Carrier!FieldVal," ",6,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Carrier",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToName!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToName",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToAddress1!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToAddress1",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToAddress2!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToAddress2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToAddress3!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToAddress3",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToCity!FieldVal," ",25,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToCity",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToState!FieldVal," ",2,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToState",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToZip!FieldVal," ",13,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToZip",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToCountry!FieldVal," ",3,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToCountry",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToAttention!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToAttention",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Filler2!FieldVal," ",11,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Filler2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).OrderType!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"OrderType",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPL(V.Local.iCount).OrderDiscPercentage!FieldVal,"0",5,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"OrderDiscPercentage",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Salesman!FieldVal," ",3,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Salesman",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Filler3!FieldVal," ",75,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Filler3",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).OverrideAutoNumbering!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"OverrideAutoNumbering",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ShipToID!FieldVal," ",6,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ShipToID",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).MarkShipment!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"MarkShipment",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).ContactName!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"ContactName",V.Local.sRet)
+		
+		f.Intrinsic.String.RPad(v.DataTable.ORDUPL(v.Local.iCount).FromLocation!FieldVal," ",2,v.Local.sRet)
+		f.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"FromLocation",V.Local.sRet)
+		
+		f.Intrinsic.String.Format(v.DataTable.ORDUPL(v.Local.iCount).CashAmount!FieldVal,"000000000.000000",v.Local.sRet)
+		f.Intrinsic.String.Replace(v.Local.sRet,".","",v.Local.sRet)
+		f.Data.DataTable.SetValue("ORDUPL",v.Local.iCount,"CashAmount",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Project!FieldVal," ",7,v.Local.sRet)
+		f.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Project",v.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPL(V.Local.iCount).Filler4!FieldVal," ",63,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPL",V.Local.iCount,"Filler4",V.Local.sRet)
+		
+	F.Intrinsic.Control.Next(V.Local.iCount)
+	
+	'Extra
+	F.Intrinsic.Control.For(V.Local.iCount,0,V.DataTable.ORDUPLExtra.RowCount--,1)
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToInternationalFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToInternationalFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToName!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToName",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToAddress1!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToAddress1",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToAddress2!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToAddress2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToAddress3!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToAddress3",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToAddress4!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToAddress4",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToAddress5!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToAddress5",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToCity!FieldVal," ",25,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToCity",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToState!FieldVal," ",2,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToState",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToZip!FieldVal," ",13,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToZip",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToCountry!FieldVal," ",25,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToCountry",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ShipToAttention!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ShipToAttention",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToInternationalFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToInternationalFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToName!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToName",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToAddress1!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToAddress1",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToAddress2!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToAddress2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToAddress3!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToAddress3",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToAddress4!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToAddress4",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToAddress5!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToAddress5",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToCity!FieldVal," ",25,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToCity",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToState!FieldVal," ",2,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToState",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToZip!FieldVal," ",13,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToZip",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToCountry!FieldVal," ",25,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToCountry",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).BillToAttention!FieldVal," ",40,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"BillToAttention",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ContactEmail!FieldVal," ",100,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ContactEmail",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ContactPhone!FieldVal," ",20,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ContactPhone",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine1!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine1",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine2!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine3!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine3",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine4!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine4",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine5!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine5",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine6!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine6",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine7!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine7",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine8!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine8",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine9!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine9",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ExtraTextLine10!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ExtraTextLine10",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).TextPosition!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"TextPosition",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ApplyTextToSalesOrder!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ApplyTextToSalesOrder",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ApplyTextToPackList!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ApplyTextToPackList",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ApplyTextToInvoice!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ApplyTextToInvoice",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ApplyTextToQuote!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ApplyTextToQuote",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ApplyTextToRouter!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ApplyTextToRouter",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).ApplyTextToWO!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"ApplyTextToWO",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).OrderSort!FieldVal," ",20,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"OrderSort",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).OrderSort2!FieldVal," ",20,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"OrderSort2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLExtra(V.Local.iCount).Filler!FieldVal," ",1960,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLExtra",V.Local.iCount,"Filler",V.Local.sRet)
+		
+	F.Intrinsic.Control.Next(V.Local.iCount)
+	
+	'Lines
+	F.Intrinsic.Control.For(V.Local.iCount,0,V.DataTable.ORDUPLLines.RowCount--,1)
+	
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).LineNumber!FieldVal,"0",3,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"LineNumber",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).Filler1!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Filler1",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).QtyOrdered!FieldVal,"0",13,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"QtyOrdered",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).Weight!FieldVal,"0",10,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Weight",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).UM!FieldVal," ",2,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"UM",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).PartNumber!FieldVal," ",17,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"PartNumber",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).PartRev!FieldVal," ",3,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"PartRev",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).Filler2!FieldVal," ",18,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Filler2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).PartLoc!FieldVal," ",2,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"PartLoc",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).QuotedPrice!FieldVal,"0",16,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"QuotedPrice",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).OverridePrice!FieldVal,"0",16,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"OverridePrice",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).Cost!FieldVal,"0",16,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Cost",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).PartDesc!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"PartDesc",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).PL!FieldVal," ",3,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"PL",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).LineOrderDate!FieldVal," ",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"LineOrderDate",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).LinePromiseDate!FieldVal," ",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"LinePromiseDate",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).UserField1!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"UserField1",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).UserField2!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"UserField2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).UserField3!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"UserField3",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).UserField4!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"UserField4",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).UserField5!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"UserField5",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).Extension!FieldVal,"0",16,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Extension",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).NoDeliveryBeforeDate!FieldVal," ",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"NoDeliveryBeforeDate",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).MustDeliverByDate!FieldVal," ",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"MustDeliverByDate",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).DataType!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"DataType",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine1!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine1",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine2!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine2",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine3!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine3",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine4!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine4",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine5!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine5",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine6!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine6",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine7!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine7",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine8!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine8",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine9!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine9",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TextLine10!FieldVal," ",30,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TextLine10",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).TaxStatusFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"TaxStatusFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).LineType!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"LineType",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).NegativeFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"NegativeFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).PriceFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"PriceFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).SufficientInvCheck!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"SufficientInvCheck",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).SurveyNo!FieldVal,"0",8,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"SurveyNo",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).RouterValFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"RouterValFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).Router!FieldVal," ",20,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Router",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).RouterSeq!FieldVal,"0",6,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"RouterSeq",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).StockXRef!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"StockXRef",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).OriginalOrd!FieldVal,"0",7,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"OriginalOrd",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).OriginalLine!FieldVal,"0",3,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"OriginalLine",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).Length!FieldVal,"0",12,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Length",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).Width!FieldVal,"0",12,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Width",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).CurrFlag!FieldVal," ",1,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"CurrFlag",V.Local.sRet)
+		
+		F.Intrinsic.String.LPad(V.DataTable.ORDUPLLines(V.Local.iCount).OrderDiscPercentage!FieldVal,"0",5,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"OrderDiscPercentage",V.Local.sRet)
+		
+		F.Intrinsic.String.RPad(V.DataTable.ORDUPLLines(V.Local.iCount).Filler3!FieldVal," ",86,V.Local.sRet)
+		F.Data.DataTable.SetValue("ORDUPLLines",V.Local.iCount,"Filler3",V.Local.sRet)
+		
+	F.Intrinsic.Control.Next(V.Local.iCount)
+	
+	'The file format that ORDUPL requires is HEADER-Line-EXTRA, where HEADER and EXTRA are the same every line. To accomplish this we will make a very strange outer delimter which we will use with the DataView.ToString method.
+	'The delimiter will be EXTRA+New Line+HEADER. This will create a string which has exactly what we need for the file content except there will be no HEADER at the beginning and no EXTRA at the end. We will just append those manually.
+	
+	'Here we extract the HEADER and EXTRA from the datatables.
+	F.Data.DataView.Create("ORDUPL","ORDUPLView",22)
+	F.Data.DataView.ToString("ORDUPL","ORDUPLView","",V.Ambient.NewLine,V.Local.sHeader)
+	F.Data.DataView.Close("ORDUPL","ORDUPLView")
+	
+	F.Data.DataView.Create("ORDUPLExtra","ORDUPLExtraView",22)
+	F.Data.DataView.ToString("ORDUPLExtra","ORDUPLExtraView","",V.Ambient.NewLine,V.Local.sExtra)
+	F.Data.DataView.Close("ORDUPLExtra","ORDUPLExtraView")
+	
+	'And now we create the delimiter 
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sExtra,V.Ambient.NewLine,V.Local.sHeader,V.Local.sDelimiter)
+	
+	'Extract data for lines using the appropriate delimiter
+	F.Data.DataView.Create("ORDUPLLines","ORDUPLLinesView",22)
+	F.Data.DataView.ToString("ORDUPLLines","ORDUPLLinesView","",V.Local.sDelimiter,V.Local.sFileContent)
+	F.Data.DataView.Close("ORDUPLLines","ORDUPLLinesView")
+	
+	'And now manually append HEADER AND EXTRA to the file content since the first row won't have the HEADER and the last row won't have the EXTRA
+	F.Intrinsic.String.Build("{0}{1}{2}{3}",V.Local.sHeader,V.Local.sFileContent,V.Local.sExtra,V.Ambient.NewLine,V.Local.sFileContent)
+	
+	'Now we need to write the file with a unique file name. We use customer name+date+time in the file name to accomplish this. If we happen to clash with another order then the writefile sub will prevent us from overwriting the existing file
+
+	v.Local.sCompanyCode.Set(v.Caller.CompanyCode.Trim)
+	v.Local.sUser.Set(v.Caller.User.Trim)	
+	v.Local.sQuoteNumber.Set(v.Args.sQuoteNumber)
+	
+	v.Local.sDate.Set(v.Ambient.Now.FormatYYYYMMDD)
+	F.Intrinsic.String.Build("{0}{1}{2}_{3}_{4}.txt",v.Local.sQuoteNumber,v.Local.sUser,v.Caller.Terminal,v.Local.sDate.Right6,v.Ambient.Now.FormatHHNNSS,V.Local.sFileName)
+	F.Intrinsic.String.Build("{0}\{1}",v.Global.sWebImporterDir,v.Local.sFileName,V.Local.sFilePath)	
+		
+	F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sFileContent)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(CatchErrorORDUPL, "Sub", V.Ambient.CurrentSubroutine, "ErrNo", V.Ambient.ErrorNumber, "ErrDesc", V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.ORDUPLCreateFile.End
+
+
+Program.Sub.UploadOrder.Start
+f.Intrinsic.Control.Try
+	
+	v.Local.sPromDate.Declare(String)
+	v.Local.iCount.Declare(Long)
+	v.Local.sLine.Declare(String)
+	v.Local.sQty.Declare(String)
+	v.Local.sPrice.Declare(String)
+	v.Local.sCreateDate.Declare(String)
+	
+	v.Local.sShipToID.Declare(String)
+	v.Local.sAddress1.Declare(String)
+	v.Local.sAddress2.Declare(String)
+	v.Local.sCity.Declare(String)
+	v.Local.sState.Declare(String)
+	v.Local.sZip.Declare(String)
+	v.Local.sCountry.Declare(String)
+	v.Local.sAttention.Declare(String)
+	v.Local.sSQL.Declare(String)
+	v.Local.sShipName.Declare(String)
+	v.Local.sRet.Declare(String)
+	
+	'reformat
+	f.Intrinsic.String.Format(v.Ambient.Date, "YYYYMMDD", v.Local.sCreateDate)
+	
+	'reset ORDUPL
+	f.Data.Datatable.DeleteRow("ORDUPL", -1)
+	f.Data.Datatable.DeleteRow("ORDUPLExtra", -1)
+	f.Data.Datatable.DeleteRow("ORDUPLLines", -1)
+	f.Data.Datatable.AcceptChanges("ORDUPL")
+	f.Data.Datatable.AcceptChanges("ORDUPLExtra")
+	f.Data.Datatable.AcceptChanges("ORDUPLLines")
+	
+	'get QuoteID
+'	v.Global.sCurrentQuoteID.Set("")
+'	f.Intrinsic.Control.CallSub(GetLastQuoteID)
+	
+	
+	f.Intrinsic.Control.For(v.Local.iCount,0,v.DataTable.dtUpload.RowCount--,1)
+		f.Intrinsic.Control.If(v.DataTable.ORDUPL.RowCount,=,0)
+			'get shipto
+			'-------------------------------------
+'			f.Intrinsic.String.LPad(v.DataTable.dtUpload(v.Local.iCount).SHIPTO!FieldValTrim, "0", 6, v.Local.sShipToID)
+			v.Local.sShipToID.Set(v.DataTable.dtUpload(v.Local.iCount).SHIPTO!FieldValTrim)
+			
+			f.ODBC.Connection!Con.OpenCompanyConnection
+			f.Intrinsic.Control.If(v.Local.sShipToID,=,"")
+				'get from V_CUSTOMER_SHIPTO
+				f.Intrinsic.String.Build("select top 1 RTRIM(NAME_CUSTOMER_SHIP), RTRIM(ADDRESS1_SHIP), RTRIM(ADDRESS2_SHIP), RTRIM(CITY_SHIP), RTRIM(STATE_SHIP), RTRIM(CODE_ZIP_SHIP), RTRIM(COUNTRY_SHIP), RTRIM(ATTENTION_SHIP) from V_CUSTOMER_SHIPTO where CUSTOMER = '{0}'", v.DataTable.dtUpload(v.Local.iCount).CUSTOMER!FieldValTrim, v.Local.sSQL)
+			f.Intrinsic.Control.Else
+				'get from V_OE_MULTI_SHIP
+				f.Intrinsic.String.Build("select top 1 RTRIM(CUSTOMER_NAME), RTRIM(SHIP_ADDRESS1), RTRIM(SHIP_ADDRESS2), RTRIM(SHIP_CITY), RTRIM(SHIP_STATE), RTRIM(SHIP_ZIP), RTRIM(SHIP_COUNTRY), RTRIM(SHIP_ATTENTION) from V_OE_MULTI_SHIP where RTRIM(CUSTOMER) = '{0}' and SHIP_SEQ='{1}'", v.DataTable.dtUpload(v.Local.iCount).CUSTOMER!FieldValTrim, v.Local.sShipToID, v.Local.sSQL)
+			f.Intrinsic.Control.EndIf
+			
+			f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+			f.ODBC.Connection!Con.Close
+			
+			f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+				f.Intrinsic.String.Split(v.Local.sRet, "*!*", v.Local.sRet)
+				v.Local.sShipName.Set(v.Local.sRet(0))
+				v.Local.sAddress1.Set(v.Local.sRet(1))
+				v.Local.sAddress2.Set(v.Local.sRet(2))
+				v.Local.sCity.Set(v.Local.sRet(3))
+				v.Local.sState.Set(v.Local.sRet(4))
+				v.Local.sZip.Set(v.Local.sRet(5))
+				v.Local.sCountry.Set(v.Local.sRet(6))
+				v.Local.sAttention.Set(v.Local.sRet(7))
+			f.Intrinsic.Control.EndIf
+			'-------------------------------------
+			
+			
+			'Nov 2022
+			'Get UM from INVENTORY_MSTR
+			f.Data.DataTable.AddExpressionColumn("dtUpload", "PART_REV", "String", "SUBSTRING(PART+'                    ',1,17) + SUBSTRING(REV+'   ',1,3)")
+			f.Data.DataTable.AddColumn("dtUpload", "UM", "String", "EA")
+			f.ODBC.Connection!Con.OpenCompanyConnection
+			v.Local.sSQL.Set("select PART, RTRIM(UM_INVENTORY) from INVENTORY_MSTR")
+			f.Data.Dictionary.CreateFromSQL("dictUM", "con", v.Local.sSQL)
+			f.Data.Dictionary.SetDefaultReturn("dictUM", "")
+			f.Data.DataTable.FillFromDictionary("dtUpload", "dictUM", "PART_REV", "UM")
+			f.Data.Dictionary.Close("dictUM")
+			f.ODBC.Connection!Con.Close
+			
+			
+			'header
+'			f.Data.DataTable.AddRow("ORDUPL", "TRANSACTION", "O", "CustomerNo", v.DataTable.dtUpload(v.Local.iCount).CUSTOMER!FieldValTrim, "OrderDate", v.Local.sCreateDate, "ContactName", v.DataTable.dtUpload(v.Local.iCount).CONTACT!FieldValTrim, "Carrier", v.DataTable.dtUpload(v.Local.iCount).CARRIER!FieldValTrim,  "UserField1Head", v.DataTable.dtUpload(v.Local.iCount).UF1!FieldValTrim, "UserField2Head", v.DataTable.dtUpload(v.Local.iCount).UF2!FieldValTrim, "UserField3Head", v.DataTable.dtUpload(v.Local.iCount).UF3!FieldValTrim, "UserField4Head", v.DataTable.dtUpload(v.Local.iCount).UF4!FieldValTrim, "MarkShipment", v.DataTable.dtUpload(v.Local.iCount).MARKSHIP!FieldValTrim, "OverrideAutoNumbering","0", "CustomerPO", v.DataTable.dtUpload(0).CUSTPO!FieldValTrim)
+			f.Data.DataTable.AddRow("ORDUPL", "TRANSACTION", "O", "CustomerNo", v.DataTable.dtUpload(v.Local.iCount).CUSTOMER!FieldValTrim, "OrderDate", v.Local.sCreateDate, "ContactName", v.DataTable.dtUpload(v.Local.iCount).CONTACT!FieldValTrim, "Carrier", v.DataTable.dtUpload(v.Local.iCount).CARRIER!FieldValTrim,  "UserField1Head", v.DataTable.dtUpload(v.Local.iCount).UF1!FieldValTrim, "UserField2Head", v.DataTable.dtUpload(v.Local.iCount).UF2!FieldValTrim, "UserField3Head", v.DataTable.dtUpload(v.Local.iCount).UF3!FieldValTrim, "UserField4Head", v.DataTable.dtUpload(v.Local.iCount).UF4!FieldValTrim, "MarkShipment", v.DataTable.dtUpload(v.Local.iCount).MARKSHIP!FieldValTrim, "OverrideAutoNumbering","0", "CustomerPO", v.DataTable.dtUpload(0).CUSTPO!FieldValTrim, "ShipToName", v.Local.sShipName, "ShipToAddress1", v.Local.sAddress1, "ShipToAddress2", v.Local.sAddress2, "ShipToCity", v.Local.sCity, "ShipToState", v.Local.sState, "ShipToZip", v.Local.sZip, "ShipToCountry", v.Local.sCountry, "ShipToAttention", v.Local.sAttention,"ShipToID", v.Local.sShipToID)
+			'Extra
+			f.Data.DataTable.AddRow("ORDUPLExtra", "ContactEmail", v.DataTable.dtUpload(v.Local.iCount).CONTACTEMAIL!FieldValTrim ,"ContactPhone", v.DataTable.dtUpload(v.Local.iCount).CONTACTPHONE!FieldValTrim)
+		f.Intrinsic.Control.EndIf
+	
+		'lines
+		f.Intrinsic.String.LPad(v.DataTable.dtUpload(v.Local.iCount).PO_LINE!FieldValTrim,"0",3, v.Local.sLine)
+'		f.Intrinsic.String.RPad(v.Local.sLine,"0",4, v.Local.sLine)
+		'qty
+		f.Intrinsic.Math.Mult(v.DataTable.dtUpload(v.Local.iCount).QTYORD!FieldValTrim,10000,v.Local.sQty)
+		f.Intrinsic.String.LPad(v.Local.sQty,"0",13,v.Local.sQty)
+		'price
+		f.Intrinsic.Math.Mult(v.DataTable.dtUpload(v.Local.iCount).PRICE!FieldValTrim,1000000,v.Local.sPrice)
+		f.Intrinsic.String.LPad(v.Local.sPrice,"0",16,v.Local.sPrice)
+'		f.Data.DataTable.AddRow("ORDUPLLines", "LineNumber", v.Local.sLine, "QtyOrdered", v.Local.sQty, "PartNumber", v.DataTable.dtUpload(v.Local.iCount).PART!FieldValTrim, "PartRev", v.DataTable.dtUpload(v.Local.iCount).REV!FieldValTrim, "OverridePrice", v.Local.sPrice, "LinePromiseDate", v.Local.sPromDate, "PartDesc", v.DataTable.dtUpload(v.Local.iCount).DESC!FieldValTrim)
+		'PROM DATE
+		f.Intrinsic.String.Format(v.DataTable.dtUpload(v.Local.iCount).PROMDATE!FieldValTrim, "YYYYMMDD", v.Local.sPromDate)
+
+		'no price
+		f.Data.DataTable.AddRow("ORDUPLLines", "LineNumber", v.Local.sLine, "QtyOrdered", v.Local.sQty, "PartNumber", v.DataTable.dtUpload(v.Local.iCount).PART!FieldValTrim, "PartRev", v.DataTable.dtUpload(v.Local.iCount).REV!FieldValTrim, "LinePromiseDate", v.Local.sPromDate, "PartDesc", v.DataTable.dtUpload(v.Local.iCount).DESC!FieldValTrim, "UM", v.DataTable.dtUpload(v.Local.iCount).UM!FieldValTrim)
+	f.Intrinsic.Control.Next(v.Local.iCount)
+
+	f.Intrinsic.Control.CallSub(ORDUPLCreateFile,"sQuoteNumber", v.DataTable.dtUpload(0).CUSTPO!FieldValTrim)
+	f.Intrinsic.UI.Sleep(1)
+	F.Global.General.CallWrapperSync(50,"ORDUPL")
+
+	f.Intrinsic.Control.CallSub(GetORDUPLErrorMessage)
+	
+	'log
+'	f.Intrinsic.String.Build("Creating SO#{0} in GSS", v.Global.sCurrentDealName, v.Local.sLog)
+'	f.Intrinsic.Control.CallSub(AddLog, "LogMsg", v.Local.sLog)
+	
+f.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.UploadOrder.End
+
+Program.Sub.CATCHERRORORDUPL.Start
+	v.Local.sMsg.Declare(String)
+	f.Intrinsic.String.Build("Sub:{0}, ErrorNo:{1}, Desc:{2}", v.Args.Sub, v.Args.ErrNo, v.Args.ErrDesc, v.Local.sMsg)
+	f.Intrinsic.UI.Msgbox( v.Local.sMsg)
+Program.Sub.CATCHERRORORDUPL.End
+
+'########################################
+'ORDUPL subs
+'END
+
+Program.Sub.cmduploadfile_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sFilePath.Declare
+
+'F.Intrinsic.UI.ShowOpenFileDialog("","xls|*.xls",V.Local.sFilePath)
+F.Intrinsic.UI.ShowOpenFileDialog("","Excel Files|*.xls;*.xlsx",V.Local.sFilePath)
+F.Intrinsic.Control.If(V.Local.sFilePath,=,"***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No File Was Selected")
+f.Intrinsic.Control.else
+	gui.frmUpload.txtfile.Text(V.Local.sFilePath)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmduploadfile_Click.End
+
+Program.Sub.cmdBrowse_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sRet.Declare(String)
+
+Function.Intrinsic.UI.Browser(300,"",Variable.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No Record was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	gui.frmUpload.txtVendor.text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+
+
+Program.Sub.cmdBrowse_Click.End
+
+Program.Sub.ErrorMsg.Start
+V.local.sUPLPURORError.Declare
+	F.Intrinsic.String.Build("{0}*!*{1}*!*{2}", V.Args.Sub, V.Args.ErrNo, V.Args.ErrDesc, V.local.sUPLPURORError)
+	f.Intrinsic.UI.Msgbox(V.local.sUPLPURORError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.frmUpload_UnLoad.Start
+F.Intrinsic.Control.Try
+
+f.Intrinsic.Control.If(v.ODBC.conx.exists,=,1)
+	f.ODBC.Connection!conx.Close
+f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.end
+	
+F.Intrinsic.Control.Catch
+	f.Intrinsic.Control.end
+F.Intrinsic.Control.EndTry
+
+Program.Sub.frmUpload_UnLoad.End
+
+Program.Sub.cmdUpload.Start
+F.Intrinsic.Control.Try
+
+V.Local.sFieldNames.Declare
+V.Local.sFilePath.Declare
+V.Local.sTypes.Declare
+v.Local.i.Declare
+v.Local.sfilter.Declare
+v.local.lStart.Declare
+V.Local.smsg.Declare
+
+
+V.Local.sFilePath.Set(v.Screen.frmUpload!txtfile.Text)
+F.Intrinsic.Control.If(V.Local.sFilePath.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("No File Was Selected")
+	f.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.InvokeWaitDialog("Importing data...","Please Wait...")
+   
+	V.Local.sFieldNames.Set("Customer*!*ShipToID*!*CUSTPO*!*PO_LINE*!*CONTNAME*!*CONTACTEMAIL*!*CONTACTPHONE*!*CARRIER*!*MARKSHIP*!*UF1*!*UF2*!*UF3*!*UF4*!*PART*!*REV*!*DESC*!*QTYORD*!*PROMDATE")
+	V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String")
+
+
+	V.Local.sFilePath.Set(v.Screen.frmUpload!txtfile.Text)
+'	V.Local.sFilePath.Set("C:\Temp\Current\DT Upload.csv")
+	Function.Data.DataTable.CreateFromCSV("OrderUP",V.Local.sFilePath,V.Local.sFieldNames,V.Local.sTypes,true)
+	f.Data.DataView.Create("OrderUP","ImportV")
+	
+	
+
+	f.Intrinsic.Control.If(v.DataTable.OrderUP.rowcount,>,1)
+		Function.Data.DataTable.DeleteRow("OrderUP",0)
+'		f.Data.DataTable.AddColumn("OrderUP","CustExist","string")
+'		f.Data.DataTable.AddColumn("OrderUP","ShipIDExist","string")
+'		f.Data.DataTable.AddColumn("OrderUP","ShipADD","string")
+'		f.Data.DataTable.AddColumn("OrderUP","LineNo","long")
+'		f.Data.DataTable.AddColumn("OrderUP","Customer_Part","string")
+'		f.Data.DataTable.AddColumn("OrderUP","PARTEXIST","string")
+'		f.Data.DataTable.AddColumn("OrderUP","UOM","string")
+'		
+'		F.Data.DataTable.SetSeries("OrderUP","LineNo",1,1)
+'		Function.Data.DataTable.SetValueFormat("OrderUP",-1,"Customer","Customer","000000")
+'		Function.Data.DataTable.SetValueFormat("OrderUP",-1,"ShipToID","ShipToID","000000")
+
+		f.Data.DataTable.SetValueFormat("OrderUP",-1,"Customer","Customer","!@@@@@@")
+		Function.Data.DataTable.AddExpressionColumn("OrderUP", "CustShipToID", "String", "Customer+ShipToID")
+
+		F.Data.DataTable.AddExpressionColumn("OrderUP", "REV1", "String", "ISNull(Rev,'   ')")
+	
+		f.Data.DataTable.SetValueFormat("OrderUP",-1,"Part","Part","!@@@@@@@@@@@@@@@@@")
+'		Function.Data.DataTable.AddExpressionColumn("OrderUP", "CustPARTREV", "String", "Convert([Customer],'System.String')  + Convert([Part],'System.String') + Convert([REV1],'System.String')")
+		Function.Data.DataTable.AddExpressionColumn("OrderUP", "CustPARTREV", "String", "[Customer]+ [Part] + [REV1]")
+		Function.Data.DataTable.AddExpressionColumn("OrderUP", "PARTREV", "String", "[Part] + [REV1]")
+		F.ODBC.Connection!conx.OpenCompanyConnection(300)
+'		F.Intrinsic.Control.CallSub(Validate)
+	f.Intrinsic.Control.else
+		f.Intrinsic.UI.Msgbox("No Orders to Upload")
+		f.Intrinsic.Control.ExitSub
+		f.Data.datatable.Close("OrderUP")
+	f.Intrinsic.Control.endif
+	
+	f.Data.DataView.SetFilter("OrderUP","ImportV","ShipIDExist = 'Y' and CustExist = 'Y' and PARTEXIST = 'Y'")
+'	f.Intrinsic.Control.If(v.DataView.OrderUP!ImportV.rowcount,>,0)
+		F.Intrinsic.UI.ChangeWaitStatus("Creating Order")
+		f.Data.Dataview.ToDataTableDistinct("OrderUP","ImportV","DTTarget","Customer*!*ShipToID")
+	
+		f.Data.DataView.Create("DTTarget","DVTarget","22")
+		f.Intrinsic.Control.for(v.Local.i,0,v.DataTable.DTTarget.RowCount--,1)
+'			f.Intrinsic.String.Build("ShipIDExist = 'Y' and CustExist = 'Y' and Customer='{0}' and ShipToID = '{1}'",v.DataTable.DTTarget(v.Local.i).Customer!FieldVal,v.DataTable.DTTarget(v.Local.i).ShipToID!FieldVal,v.Local.sfilter)
+'			f.Data.DataView.SetFilter("OrderUP","ImportV",v.Local.sfilter)
+	
+			
+			f.Intrinsic.Math.Add(V.Local.i,1,v.local.lStart)
+			f.Intrinsic.String.Build("Creating Orders {0}/{1}",v.local.lStart,v.DataTable.DTTarget.RowCount,V.Local.smsg)
+			
+			F.Intrinsic.UI.ChangeWaitStatus(V.Local.smsg)
+	
+			F.Intrinsic.Control.CallSub(ORDUPLUpload)
+		f.Intrinsic.Control.Next(v.Local.i)
+		Function.Intrinsic.Debug.InvokeDebugger
+		Function.Intrinsic.Debug.Stop
+		
+		F.Global.General.CallWrapperSync(50,"ORDUPL")
+	
+		
+		f.ODBC.Connection!conx.execute("update order_lines set CUSTOMER_PART = USER_4 where USER_5 = 'GSSCUSTPARTUPDATE' and Record_Type = 'L'")
+		f.ODBC.Connection!conx.execute("update order_lines set USER_4 ='',USER_5 = '' where USER_5 = 'GSSCUSTPARTUPDATE' and Record_Type = 'L'")
+	
+		f.Data.DataView.Close("DTTarget","DVTarget")
+		f.Data.datatable.Close("DTTarget")
+		f.Intrinsic.UI.Msgbox("Upload completed")
+'	f.Intrinsic.Control.else
+'		f.Intrinsic.UI.Msgbox("No Orders to Upload")
+'	f.Intrinsic.Control.endif
+	
+	F.Intrinsic.Control.CallSub(Error_Log)
+	
+	
+	f.Data.DataView.Close("OrderUP","ImportV")
+	f.Data.datatable.Close("OrderUP")
+	
+	f.Intrinsic.Control.CallSub(frmUpload_UnLoad)
+
+f.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdUpload.End
+
+Program.Sub.ORDUPLUpload.Start
+F.Intrinsic.Control.Try
+
+V.Local.i.Declare(Float)
+V.Local.sRet.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sFileContents.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.sTime.Declare(String)
+V.Local.sDate.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sRet2.Declare(String)
+V.Local.sOrders.Declare(String)
+V.Local.iOrder.Declare(Long)
+v.Local.bNegative.Declare(Boolean)
+V.Local.lRetval.Declare
+V.Local.smsg.Declare(String)
+v.local.lStart.declare
+v.local.lEnd.declare
+
+'Exit lib file if UDT is NOT loaded
+
+'Loop through uOrders and format before calling upload
+'One each element , clear sRet first, this is incase that element is not used.
+'When formatting each element of the udt, return the final formatted element to 'v.local.sRet', it is already programmed to use that as the variable when building the file
+'f.Intrinsic.UI.InvokeWaitDialog(V.Local.smsg)
+
+F.Intrinsic.Control.For(V.Local.i,0,v.DataView.OrderUP!ImportV.rowcount--,1)
+
+	
+	'***FIELD,Length,StartPosition-Description if Availab
+	
+	'Transaction, 1,1 Transaction Code:  ""O"" for sales order or ""Q"" for Quote    '***REQUIRED***
+	V.Local.sTemp.Set("O")
+	'Customer, 7,2 Customer Number: '***REQUIRED*** unless using ordupmnu to choose customer id.
+	
+	F.Intrinsic.String.RPad(V.DataView.OrderUP!ImportV(v.local.i).Customer!FieldVal," ",7,V.Local.sRet)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	'OrderNo, 7,9 If AutoNumbering Turned on can be left blank, otherwise a required field with leading zeros
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",15,V.Local.sTemp)
+	'Freight,10,16 Freight amount  8.2  Must enter numeric values with a filler of zeroes- do not use spaces. Example entry of 2.50     0000000250
+	V.Local.sRet.Set("")
+
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",25,V.Local.sTemp)
+	'Tax Freight Flag,1,26 Flag Y N or blank
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",26,V.Local.sTemp)
+	'Freight Per Piece,1,27 Flag Y N or blank
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",27,V.Local.sTemp)
+	'Order Date Due,8,28 CCYYMMDD   Example entry of Aug 5 2006     20060806
+	f.Intrinsic.String.Format(V.DataView.OrderUP!ImportV(v.local.i).PROMDATE!FieldVal,"YYYYMMDD",v.Local.sRet)
+'	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!DateDue_Order,"YYYYMMDD",v.Local.sRet)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",35,V.Local.sTemp)
+	'Order Date,8,36 CCYYMMDD   Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+'	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Date_Order_Line,"YYYYMMDD",v.Local.sRet)
+'	f.Intrinsic.String.Format(v.Ambient.Date,"YYYYMMDD",v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",43,V.Local.sTemp)
+	'User 1 Header,30,44 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.DataView.OrderUP!ImportV(v.local.i).UF1!FieldVal,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",73,V.Local.sTemp)
+	'User Field 2 Header,30,74 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.DataView.OrderUP!ImportV(v.local.i).UF2!FieldVal,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",103,V.Local.sTemp)
+	'User Field 3 Header,30,104 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.DataView.OrderUP!ImportV(v.local.i).UF3!FieldVal,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",133,V.Local.sTemp)
+	'User Field 4 Header,30,134 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.DataView.OrderUP!ImportV(v.local.i).UF4!FieldVal,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",163,V.Local.sTemp)
+	'User Field 5 Header,30,164 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",193,V.Local.sTemp)
+	'UserId,8,194 User Field for Header up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",201,V.Local.sTemp)
+	'CustomerPO,15,202UserFieldforHeaderupto30characters
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).CUSTPO!FieldVal)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",231,V.Local.sTemp)
+	'Filler_1,15,217,Not Used- Leave Blank
+
+	'Freight_CurrFlag,1,232,Y N or blank
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",232,V.Local.sTemp)
+	'Data Type,1,233,"""S"" for shipping data"
+	V.Local.sRet.Set("S")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",233,V.Local.sTemp)
+	'Ship Via,20,234
+	V.Local.sRet.Set("")
+	
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",253,V.Local.sTemp)
+	'Carrier,6,254
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).CARRIER!FieldVal)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",259,V.Local.sTemp)
+	
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).ShipADD!FieldVal)
+	f.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	'Ship To Name,30,260
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Name)
+	
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(0),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",289,V.Local.sTemp)
+	'Ship To Address 1,30,290
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Address1)
+'	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(1),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",319,V.Local.sTemp)
+	'Ship To Address 2,30,320
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Address2)
+'	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(2),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",349,V.Local.sTemp)
+	'Ship To Address 3,30,350
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Address3)
+'	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(3),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",379,V.Local.sTemp)
+	'Ship To City,25,380
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_City)
+'	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(4),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",404,V.Local.sTemp)
+	'Ship To State,2,405
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_State)
+'	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(5),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",406,V.Local.sTemp)
+	'Ship To Zip,13,407
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Zip)
+'	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(6),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",419,V.Local.sTemp)
+	'Ship To Country,3,420
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Ship_To_Country)
+'	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet(7),V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",422,V.Local.sTemp)
+	'ShipToAttention,30,423
+'	V.Local.sRet.Set(v.uGlobal.uOrders(v.Local.i)!Ship_To_Attn)
+	V.Local.sRet.Set("")
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",463,V.Local.sTemp)
+	'filler in reusable area,11,453,Not in Use
+
+	'Order type,1,464,"Regular = blank or spaces, Invoice = ""X"
+	V.Local.sRet.Set("")
+'	V.Local.sRet.Set(V.uGlobal.uOrders(v.Local.i)!Order_Type)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",464,V.Local.sTemp)
+	'Order Discount Percentage,5,465,1.4 with an implied decimal (example:  45% would show as 04500 in the file
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",469,V.Local.sTemp)
+	''Salesman,3,470,Salesman code within GSS
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",472,V.Local.sTemp)
+	'PAY-METHOD , 2,473
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",474,V.Local.sTemp)
+	'PAY-OWNER-NAME,30,475
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",504,V.Local.sTemp)
+	'PAY-CC-TYPE ,2,505
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",506,V.Local.sTemp)
+	'PAY-CC-NO , 25,507
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",531,V.Local.sTemp)
+	'PAY-CC-LENGTH , 2,532
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",533,V.Local.sTemp)
+	'PAY-CC-EXP-DT , 6,534
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",539,V.Local.sTemp)
+	'PAY-CC-CVV , 7, 540
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",546,V.Local.sTemp)
+	'PAY-CVV-LENGTH 1, 547 Numeric(1 or 0)
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",547,V.Local.sTemp)
+	'Override auto numbering,1,548,"Populate with ""1"" will override the auto ordering number with the number provided in the order number above
+	V.Local.sRet.Set("")
+'	f.Intrinsic.Control.If(v.uGlobal.uOrders(v.Local.i)!Order_No,<>,"")
+'		f.Intrinsic.Math.Add(v.Local.i,1,v.Local.sRet)
+'	f.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",548,V.Local.sTemp)
+	'Ship To Id,6,549,"Optional, must be valid for customer
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).ShipToID!FieldVal)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",554,V.Local.sTemp)
+	'Mark Shipment,30,555
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).MARKSHIP!FieldVal)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",584,V.Local.sTemp)
+	'Contact Name,30,585
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).CONTNAME!FieldVal)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",614,V.Local.sTemp)
+	'From Location, 2,615
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",701,V.Local.sTemp)
+	'Filler_3,85,617,Not in Use
+
+	'***Line Data***
+	'Line Number,3,702,Not '***REQUIRED*** Valid input is 1 through 999
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",705,V.Local.sTemp)
+	'Filler_Line,1,705,Not Used- Leave Blank
+
+	'Qty Ordered,13,706,9.4; REQUIRED  Must enter numeric values with a filler or zeroes- do not enter spaces.  Example entry of 10  0000000100000
+	V.Local.sRet.Set("")
+
+	V.Local.lRetval.Set(V.DataView.OrderUP!ImportV(v.local.i).QTYORD!FieldVal)
+	f.Intrinsic.Control.If(v.Local.lRetval.long,<,0)
+		v.Local.bNegative.Set(True)
+	f.Intrinsic.Control.Else
+		v.Local.bNegative.Set(False)
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Format(V.DataView.OrderUP!ImportV(v.local.i).QTYORD!FieldVal,"0.0000",V.Local.sRet)
+	f.Intrinsic.String.Replace(V.Local.sRet,".","",v.Local.sRet)
+	f.Intrinsic.String.Replace(v.Local.sRet,"-","",v.Local.sRet)
+	F.Intrinsic.String.LPad(V.Local.sRet,"0",13,V.Local.sRet)
+	
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",718,V.Local.sTemp)
+	'Weight,10,719,7.3 Must enter numeric values with a filler of zeroes- do not use spaces. Example entry of 2.50 would be 0000002500
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",728,V.Local.sTemp)
+	'Unit Of Measure,2,729,Unit of Measure
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).UOM!FieldVal)
+	F.Intrinsic.String.RPad(V.Local.sRet," ",2,V.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",730,V.Local.sTemp)
+	'*** 20 Char Part# - PART, 20,731'***REQUIRED***
+	'Part Number,17,731,17 character part number
+	'Part Rev,3,748,'***REQUIRED*** if using part rev and a revision exists OR if NOT using part revision and part is longer than 17 characters long.
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).PART!FieldVal)
+		
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,v.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",768,V.Local.sTemp)
+	'Filler,18,751,Not in Use - Leave Blank
+
+	'Part Location,2,769,Location code
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",770,V.Local.sTemp)
+	'Quoted Price,16,771,10.6; REQUIRED in company currency.
+	'Make sure to fill in discount price even if no discounts apply.
+	'Enter leading zeros - do not enter spaces.   Example of 12.50 0000000012500000
+	V.Local.sRet.Set("")
+'	f.Intrinsic.String.Format(V.DataView.OrderUP!ImportV(v.local.i).PRICE!FieldVal,"0.000000",V.Local.sRet)
+'	f.Intrinsic.String.Replace(V.Local.sRet,".","",v.Local.sRet)
+'	F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)	
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",786,V.Local.sTemp)
+	'OverRidePrice,16,787,10.6; any price over-rides in company currency.
+	'Make sure to fill in discount price even if no discounts apply.
+	'Enter leading zeros - do not enter spaces.   Example of 12.50 0000000012500000
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",802,V.Local.sTemp)
+	'Cost,16,803,10.6; Cost of the Part in company currency.
+	'Enter leading zeros - do not enter spaces.   Example of 12.50  00000012500000
+	V.Local.sRet.Set("")
+'	f.Intrinsic.String.Format(V.DataView.OrderUP!ImportV(v.local.i).COST!FieldVal,"0.000000",V.Local.sRet)
+'	f.Intrinsic.String.Replace(V.Local.sRet,".","",v.Local.sRet)
+'	F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",818,V.Local.sTemp)
+	'DescriptionPart,30,819,Description of the Part Number Length of 30
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).DESC!FieldVal)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",848,V.Local.sTemp)
+	'Product Line,3,849,Product Line of part number
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",851,V.Local.sTemp)
+	'Line Order Date,8,852,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+'	f.Intrinsic.String.Format(v.Ambient.Date,"YYYYMMDD",v.Local.sRet)
+'	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Date_Order_Line,"YYYYMMDD",v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",859,V.Local.sTemp)
+	'Line Promise Date,8,860,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+'	f.Intrinsic.String.Format(V.DataView.OrderUP!ImportV(v.local.i).PROMDATE!FieldVal,"YYYYMMDD",v.Local.sRet)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",867,V.Local.sTemp)
+	'User Field 1,30,868,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",897,V.Local.sTemp)
+	'User Field 2,30,898,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",927,V.Local.sTemp)
+	'User Field 3,30,928,User Field forLine up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",957,V.Local.sTemp)
+	'User Field 4,30,958,User Field forLine up to 30 characters
+	V.Local.sRet.Set(V.DataView.OrderUP!ImportV(v.local.i).Customer_Part!FieldVal)
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",987,V.Local.sTemp)
+	'User Field 5,30,988,User Field forLine up to 30 characters
+	V.Local.sRet.Set("GSSCUSTPARTUPDATE")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1017,V.Local.sTemp)
+	'Extention,16,1018,"10.6 in company currency.
+	'Leading zeros - no spaces or commas.  Example of 1,250.21  0000001250210000
+	V.Local.sRet.Set("")
+'	f.Intrinsic.String.Format(v.uGlobal.uOrders(v.Local.i)!Extention,"0.000000",v.uGlobal.uOrders(v.Local.i)!Extention)
+'	f.Intrinsic.String.Replace(v.uGlobal.uOrders(v.Local.i)!Extention,".","",v.Local.sRet)
+'	F.Intrinsic.String.LPad(V.Local.sRet,"0",16,V.Local.sRet)
+	
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1033,V.Local.sTemp)
+	'No Delivery Before Date,8,1034,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1041,V.Local.sTemp)
+	'Must Deliver By Date,8,1042,CCYYMMDD  Example entry of Aug 5 2006     20060806
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1049,V.Local.sTemp)
+	'vvv EXTRA TEXT vvv
+
+	'DataType,1,1050,"""T"" for sales order text
+	V.Local.sRet.Set("")
+
+'	f.Intrinsic.Control.If(V.uGlobal.uOrders(v.Local.i)!TEXT_LINE1.Trim,<>,"")
+'		V.uGlobal.uOrders(v.Local.i)!Txt_Data_Type.Set("T")
+'	f.Intrinsic.Control.Else
+'		V.uGlobal.uOrders(v.Local.i)!Txt_Data_Type.Set("")
+'	f.Intrinsic.Control.EndIf
+	
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!Txt_Data_Type.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1050,V.Local.sTemp)
+	'Text Line 1,30,1051,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE1.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1080,V.Local.sTemp)
+	'Text Line 2,30,1081,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE2.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1110,V.Local.sTemp)
+	'Text Line 3,30,1111,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE3.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1140,V.Local.sTemp)
+	'Text Line 4,30,1141,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE4.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1170,V.Local.sTemp)
+	'Text Line 5,30,1171,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE5.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1200,V.Local.sTemp)
+	'Text Line 6,30,1201,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE6.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1230,V.Local.sTemp)
+	'Text Line 7,30,1231,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE7.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1260,V.Local.sTemp)
+	'Text Line 8,30,1261,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE8.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1290,V.Local.sTemp)
+	'Text Line 9,30,1291,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE9.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1320,V.Local.sTemp)
+	'Text Line 10,30,1321,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+'	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.uGlobal.uOrders(v.Local.i)!TEXT_LINE10.Trim,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1350,V.Local.sTemp)
+	'Tax Status Flag,1,1351,"""E"" for exempt, ""T"" for taxable
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1351,V.Local.sTemp)
+	'Line Type,1,1352,"""B"" for buyout, ""D"" for dropship, ""S"" for standard, ""C"" for consignment
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1352,V.Local.sTemp)
+	'Negative Flag,1,1353,"""1"" = The order qty is negative for this line."
+	V.Local.sRet.Set("")
+	f.Intrinsic.Control.If(v.Local.bNegative,=,True)
+		v.Local.sRet.Set("1")
+	f.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1353,V.Local.sTemp)
+	'Price Flag,1,1354,"""1"" = Accept zero price for this line.
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1354,V.Local.sTemp)
+	'Sufficient Inventory Check,1,1355,"""1"" = Check to make sure inventory level is sufficient for this line.
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1355,V.Local.sTemp)
+	'Survey No ,8,1356
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1363,V.Local.sTemp)
+	'Router Val Flag 1,1364
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1364,V.Local.sTemp)
+	'Router , 20,1365
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1384,V.Local.sTemp)
+	'Router Seq ,6,1385
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1390,V.Local.sTemp)
+	'STOCK-XREF, 1,1391
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1391,V.Local.sTemp)
+	'Origin Order ,7,1392
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1398,V.Local.sTemp)
+	'Origin Line,3,1399
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1401,V.Local.sTemp)
+	'Length ,12,1402 Numeric(8,4)
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1413,V.Local.sTemp)
+	'WIDTH ,12,1414 Numeric(8,4)
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1425,V.Local.sTemp)
+	'CURR-FLAG ,1,1426
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1426,V.Local.sTemp)
+	'Order Discount Percentage,5,1427,Order Line Discount format.
+	'The field contains 1 leading digit and four decimals.  So 00500 would be entered for a 5% discount.
+	V.Local.sRet.Set("")
+'		F.Intrinsic.Control.If(V.uGlobal.uOrders(v.Local.i)!Order_Disc_Pct.Trim,<>,"")
+'			F.Intrinsic.String.Split(V.uGlobal.uOrders(v.Local.i)!Order_Disc_Pct,".",V.Local.sRet)
+'			F.Intrinsic.String.RPad(V.Local.sRet(1),"0",4,V.Local.sRet)
+'		F.Intrinsic.Control.EndIf
+'		F.Intrinsic.String.LPad(V.Local.sRet,"0",5,V.Local.sRet)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1517,V.Local.sTemp)
+	'Filler,86,1432,Not in Use - Leave Blank
+
+	'***Extended Header Data***
+	'Ship To International Flag,1,1518,"""Y"" for international address, ""N"" or spaces for domestic address
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1518,V.Local.sTemp)
+	'Ship To Name,40,1519
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1558,V.Local.sTemp)
+	'Ship To Address 1,40,1559
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1598,V.Local.sTemp)
+	'Ship To Address 2,40,1599
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1638,V.Local.sTemp)
+	'Ship To Address 3,40,1639
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1678,V.Local.sTemp)
+	'Ship To Address 4,40,1679
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1718,V.Local.sTemp)
+	'Ship To Address 5,40,1719
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1758,V.Local.sTemp)
+	'Ship To City,25,1759
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1783,V.Local.sTemp)
+	'Ship To State,2,1784
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1785,V.Local.sTemp)
+	'Ship To Zip,13,1786
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1798,V.Local.sTemp)
+	''Ship To Country,25,1799
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1823,V.Local.sTemp)
+	'Ship To Attention,40,1824
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1863,V.Local.sTemp)
+	'Bill To International Flag,1,1864,"""Y"" for international address, ""N"" or spaces for domestic address
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1864,V.Local.sTemp)
+	'Bill To Name,40,1865
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1904,V.Local.sTemp)
+	'Bill To Address 1,40,1905
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1943,V.Local.sTemp)
+	'Bill To Address 2,40,1945
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",1984,V.Local.sTemp)
+	'Bill To Address 3,40,1985
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2024,V.Local.sTemp)
+	'Bill To Address 4,40,2025
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2064,V.Local.sTemp)
+	'Bill To Address 5,40,2065
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2104,V.Local.sTemp)
+	'Bill To City,25,2105
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2129,V.Local.sTemp)
+	'Bill To State,2,2130
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2131,V.Local.sTemp)
+	'Bill To Zip,13,2132
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2144,V.Local.sTemp)
+	'Bill To Country,25,2145
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2169,V.Local.sTemp)
+	'Bill To Attention,40,2170
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2209,V.Local.sTemp)
+	'Contact's Email Address,100,2210
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.DataView.OrderUP!ImportV(v.local.i).CONTACTEMAIL!FieldVal,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2309,V.Local.sTemp)
+	'Contact's Phone,20,2310
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.DataView.OrderUP!ImportV(v.local.i).CONTACTPHONE!FieldVal,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2329,V.Local.sTemp)
+	'***Sales Order Header Text Data***
+	'Text Line 1,30,2330,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2359,V.Local.sTemp)
+	'Text Line 2,30,2360,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2389,V.Local.sTemp)
+	'Text Line 3,30,2390,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2419,V.Local.sTemp)
+	'Text Line 4,30,2420,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2449,V.Local.sTemp)
+	'Text Line 5,30,2450,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2479,V.Local.sTemp)
+	'Text Line 6,30,2480,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2509,V.Local.sTemp)
+	'Text Line 7,30,2510,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2539,V.Local.sTemp)
+	'Text Line 8,30,2540,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2569,V.Local.sTemp)
+	'Text Line 9,30,2570,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2599,V.Local.sTemp)
+	'Text Line 10,30,2600,Additional Text for Line up to 30 characters
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2629,V.Local.sTemp)
+	'Text Position,1,2630,"""H"" for header, ""F"" for footer
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2630,V.Local.sTemp)
+	'Apply Text to Sales Order,1,2631,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2631,V.Local.sTemp)
+	'Apply Text to Packing List,1,2632,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2632,V.Local.sTemp)
+	'Apply Text to Invoice,1,2633,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2633,V.Local.sTemp)
+	'Apply Text to Quote,1,2634,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2634,V.Local.sTemp)
+	'Apply Text to Router,1,2635,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2636,V.Local.sTemp)
+	'Apply Text to Work Order,1,2636,"""Y"" to apply, ""N"" for do not apply
+	V.Local.sRet.Set("")
+
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sTemp,V.Local.sRet,V.Local.sTemp)
+	F.Intrinsic.String.RPad(V.Local.sTemp," ",2637,V.Local.sTemp)
+	'Filler,1000,2637,Not in Use - Leave Blank
+
+	'Filler,1000,3637,Not in Use - Leave Blank
+
+	'***Total Record length of,4565 if all used
+
+	'Build File Contents in Separate Temp Var
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFileContents,V.Local.sTemp,V.Ambient.NewLine,V.Local.sFileContents)
+F.Intrinsic.Control.Next(V.Local.i)
+
+	f.Intrinsic.String.Build("{0}\WEB_ORDERS",V.Caller.FilesDir,v.Local.sFile)
+	f.Intrinsic.File.CreateDir(v.Local.sFile)
+	F.Intrinsic.String.Build("{0}\WEB_ORDERS\{1}{2}.txt",V.Caller.FilesDir,V.Caller.CompanyCode,V.Ambient.Time.FormatHHNNSS,V.Local.sFile)
+
+	'String to File containing sFileContents to v.Args.File Passed from other Prgrm
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFileContents)
+	V.Local.sFileContents.Set("")
+
+
+'Below is dependent on GSSPARAM.txt setup
+'Call Upload Web Importer ORDUPL
+'F.Global.General.CallWrapperSync(50,"ORDUPL")
+
+f.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+	f.Intrinsic.Control.EndTry
+Program.Sub.ORDUPLUpload.End
+
+Program.Sub.Validate.Start
+F.Intrinsic.Control.Try
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+v.Local.ssubsql.Declare
+
+	
+	'GET PART EXIST
+	
+	
+	f.Intrinsic.String.Build("select PART,'Y' as val,UM_INVENTORY from INVENTORY_MSTR",v.Local.ssubsql,V.Local.sRet,V.Local.sSQL)
+	f.Data.DataTable.CreateFromSQL("DTShip","conx",V.Local.sSQL)
+	
+	Function.Data.Dictionary.CreateFromDataTable("dict","DTShip","PART","val")
+	F.Data.Dictionary.SetDefaultReturn("dict", "N")
+	F.Data.DataTable.FillFromDictionary("OrderUP", "dict", "PARTREV", "PARTEXIST")
+	F.Data.Dictionary.Close("dict")
+
+	Function.Data.Dictionary.CreateFromDataTable("dict","DTShip","PART","UM_INVENTORY")
+	F.Data.Dictionary.SetDefaultReturn("dict", "")
+	F.Data.DataTable.FillFromDictionary("OrderUP", "dict", "PARTREV", "UOM")
+	F.Data.Dictionary.Close("dict")
+	f.Data.datatable.Close("DTShip")
+'	
+'	Function.Data.Dictionary.CreateFromSQL("dict","conx","select PART, 'Y' as col from INVENTORY_MSTR")
+'	F.Data.Dictionary.SetDefaultReturn("dict", "N")
+'	F.Data.DataTable.FillFromDictionary("OrderUP", "dict", "PARTREV", "PARTEXIST")
+'	F.Data.Dictionary.Close("dict")
+''	
+	'GET Customer PArt
+	Function.Data.Dictionary.CreateFromSQL("dict","conx","select Customer+Part,Customer_Part from INV_CROSS_REF")
+	F.Data.Dictionary.SetDefaultReturn("dict", "")
+	F.Data.DataTable.FillFromDictionary("OrderUP", "dict", "CustPARTREV", "Customer_Part")
+	F.Data.Dictionary.Close("dict")
+	
+	'Customer Exist
+	F.Data.DataView.ToDataTableDistinct("OrderUP","ImportV","DTTemp","Customer")
+	f.Data.DataView.Create("DTTemp","DVTemp",22,"","")
+	
+	Function.Data.DataView.ToString("DTTemp","DVTemp","Customer","*!*",",",V.Local.sRet)
+	Function.Intrinsic.String.SPLIT(V.Local.sRet,",",V.Local.sRet)
+	Function.Intrinsic.String.Join(V.Local.sRet,"','",V.Local.sRet)
+	f.Intrinsic.String.Build("select Customer,'Y' from v_CUSTOMER_MASTER where Customer IN ('{0}')",V.Local.sRet,V.Local.sSQL)
+	F.Data.Dictionary.CreateFromSQL("dict", "conx",V.Local.sSQL)
+	F.Data.Dictionary.SetDefaultReturn("dict", "N")
+	F.Data.DataTable.FillFromDictionary("OrderUP", "dict", "Customer", "CustExist")
+	F.Data.Dictionary.Close("dict")
+	f.Data.datatable.Close("DTTemp")
+	
+	'ShipID Exist
+	F.Data.DataView.ToDataTableDistinct("OrderUP","ImportV","DTTemp","CustShipToID")
+	f.Data.DataView.Create("DTTemp","DVTemp",22,"","")
+	Function.Data.DataView.ToString("DTTemp","DVTemp","CustShipToID","*!*",",",V.Local.sRet)
+	Function.Intrinsic.String.SPLIT(V.Local.sRet,",",V.Local.sRet)
+	Function.Intrinsic.String.Join(V.Local.sRet,"','",V.Local.sRet)
+	
+	f.Intrinsic.String.Build("CUSTOMER_NAME{0}SHIP_ADDRESS1{0}SHIP_ADDRESS2{0}SHIP_ADDRESS3{0}SHIP_CITY{0}SHIP_STATE{0}SHIP_ZIP{0}SHIP_COUNTRY as 'ShipADD'","+ '*!*' +",v.Local.ssubsql)
+
+	f.Intrinsic.String.Build("select Customer+rtrim(Ship_Seq) as co,'Y' as val,{0} from v_OE_MULTI_SHIP where Customer + Ship_Seq IN ('{1}')",v.Local.ssubsql,V.Local.sRet,V.Local.sSQL)
+	f.Data.DataTable.CreateFromSQL("DTShip","conx",V.Local.sSQL)
+	
+
+	Function.Data.Dictionary.CreateFromDataTable("dict","DTShip","co","val")
+	F.Data.Dictionary.SetDefaultReturn("dict", "N")
+	F.Data.DataTable.FillFromDictionary("OrderUP", "dict", "CustShipToID", "ShipIDExist")
+	F.Data.Dictionary.Close("dict")
+	
+	Function.Data.Dictionary.CreateFromDataTable("dict","DTShip","co","ShipADD")
+	F.Data.Dictionary.SetDefaultReturn("dict", "N")
+	F.Data.DataTable.FillFromDictionary("OrderUP", "dict", "CustShipToID", "ShipADD")
+	F.Data.Dictionary.Close("dict")
+	
+	
+	f.Data.DataView.Close("DTTemp","DVTemp")
+    f.Data.datatable.Close("DTTemp")
+    f.Data.datatable.Close("DTShip")
+
+
+f.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+	f.Intrinsic.Control.EndTry
+Program.Sub.Validate.End
+
+Program.Sub.Error_Log.Start
+F.Intrinsic.Control.Try
+
+V.Local.sRet.Declare
+v.Local.sErrorLog.Declare
+V.Local.sRet1.Declare
+
+f.Data.DataTable.AddColumn("OrderUP","DashRemarks","string")
+
+
+Function.Data.DataView.SetFilter("OrderUP","ImportV","PARTEXIST = 'N'")
+f.Data.DataView.SetValue("OrderUP","ImportV",-1,"DashRemarks","Part not found")
+
+Function.Data.DataView.SetFilter("OrderUP","ImportV","CustExist = 'N'")
+f.Data.DataView.SetValue("OrderUP","ImportV",-1,"DashRemarks","Customer not found")
+
+Function.Data.DataView.SetFilter("OrderUP","ImportV","ShipIDExist = 'N'")
+f.Data.DataView.SetValue("OrderUP","ImportV",-1,"DashRemarks","SHIPID not found")
+
+Function.Data.DataView.SetFilter("OrderUP","ImportV","ShipIDExist = 'N' and CustExist = 'N'")
+f.Data.DataView.SetValue("OrderUP","ImportV",-1,"DashRemarks","Customer & SHIPID not found")
+
+Function.Data.DataView.SetFilter("OrderUP","ImportV","ShipIDExist = 'N' and CustExist = 'N' and PARTEXIST = 'N'")
+f.Data.DataView.SetValue("OrderUP","ImportV",-1,"DashRemarks","Customer & SHIPID & PART not found")
+
+Function.Data.DataView.SetFilter("OrderUP","ImportV","DashRemarks <> ''")
+f.Intrinsic.Control.If(v.DataView.OrderUP!ImportV.RowCount,>,0)
+	Function.Data.DataView.ToString("OrderUP","ImportV","LineNo*!*Customer*!*ShipToID*!*DashRemarks",",",v.Ambient.NewLine,V.Local.sRet)
+	
+	V.Local.sRet1.Set("ROW,CUSTOMER ID,SHIP TO ID,ERROR")
+	f.Intrinsic.String.Build("{0}{1}{2}",V.Local.sRet1,v.Ambient.NewLine,V.Local.sRet,V.Local.sRet)
+
+	f.Intrinsic.String.Build("{0}\Errorlog_{1}.csv",v.Caller.LocalGSSTempDir,V.Ambient.now.FormatMMDDYYYYHHNNSS,v.Local.sErrorLog)
+	f.Intrinsic.File.String2File(v.Local.sErrorLog,v.Local.sRet)
+	f.Intrinsic.Task.ShellExec(0,"",v.Local.sErrorLog,"","",1)
+f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+	f.Intrinsic.Control.EndTry
+Program.Sub.Error_Log.End
+
+Program.Sub.GetORDUPLErrorMessage.Start
+F.Intrinsic.Control.Try
+
+V.Local.sPath.Declare(String)
+V.Local.sContents.Declare(String)
+V.Local.sMessage.Declare(String, "Unspecified error occured.")
+V.Local.bExists.Declare(Boolean)
+V.Local.sFilter.Declare(String)
+V.Local.sUploadFile.Declare(String)
+v.Local.sPO.Declare(String)
+v.Local.sTimeStamp.Declare(String)
+v.Local.sPassedFailed.Declare(String)
+v.Local.bPassed.Declare(Boolean)
+v.Local.iCount.Declare(Long)
+v.Local.sIndex.Declare(String)
+
+'read in the ORDUPL error log
+F.Intrinsic.String.Build("{0}\ORDUP{1}.ERR", V.Caller.FilesDir, V.Caller.CompanyCode, V.Local.sPath)
+F.Intrinsic.File.Exists(V.Local.sPath, V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists)
+	F.Intrinsic.File.File2String(V.Local.sPath, V.Local.sContents)
+	
+	'clean it up a bit
+	F.Intrinsic.String.RegExReplace(V.Local.sContents, " {2,}", " ", True, True, V.Local.sContents)
+	F.Intrinsic.String.RegExReplace(V.Local.sContents, "\| +", "|", True, True, V.Local.sContents)
+	F.Data.DataTable.CreateFromString("dtOrduplError", V.Local.sContents, "Message_1*!*Message_2*!*Date*!*Time*!*File", "String*!*String*!*String*!*String*!*String", "|", V.Ambient.NewLine)
+	
+	'make sure it has data
+	F.Intrinsic.Control.If(V.DataTable.dtOrduplError.RowCount, >, 0)
+		'delete blank last row
+		F.Data.DataTable.DeleteRow("dtOrduplError",V.DataTable.dtOrduplError.RowCount--)
+		
+		'get the last row
+'		v.Local.sMessage.Set(V.DataTable.dtOrduplError(V.DataTable.dtOrduplError.RowCount--).Message_2!FieldValTrim)
+		
+		V.Local.sUploadFile.Set(V.DataTable.dtOrduplError(V.DataTable.dtOrduplError.RowCount--).FILE!FieldValTrim)
+		F.Intrinsic.String.Build("File = '{0}'", V.Local.sUploadFile, V.Local.sFilter)
+		f.Data.DataTable.Select("dtOrduplError", v.Local.sFilter, v.Local.sIndex)
+		
+		f.Intrinsic.String.Split(v.Local.sIndex, "*!*", v.Local.sIndex)
+		f.Intrinsic.Control.If(v.Local.sIndex.UBound,=,0)
+			v.Local.sMessage.Set(V.DataTable.dtOrduplError(V.DataTable.dtOrduplError.RowCount--).Message_2!FieldValTrim)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.Control.For(v.Local.iCount,0,v.Local.sIndex.UBound,1)
+				f.Intrinsic.Control.If(v.Local.iCount,=,0)
+					v.Local.sMessage.Set(V.DataTable.dtOrduplError(v.Local.sIndex(v.Local.iCount)).Message_2!FieldValTrim)
+				f.Intrinsic.Control.Else
+					f.Intrinsic.String.Build("{0}{1}{2}", v.Local.sMessage, "||", V.DataTable.dtOrduplError(v.Local.sIndex(v.Local.iCount)).Message_2!FieldValTrim, v.Local.sMessage)
+				f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.Next(v.Local.iCount)
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.If(V.DataTable.dtOrduplError(V.DataTable.dtOrduplError.RowCount--).Message_1!FieldValTrim,=,"Program: ORDUPL Message: Success Message")
+			v.Local.sPassedFailed.Set("Passed")
+		f.Intrinsic.Control.Else
+			v.Local.sPassedFailed.Set("Failed or Warnings")
+		f.Intrinsic.Control.EndIf
+		
+		'check for error message
+'		V.Local.sUploadFile.Set(V.DataTable.dtOrduplError(V.DataTable.dtOrduplError.RowCount--).FILE!FieldValTrim)
+'		F.Intrinsic.String.Build("File = '{0}' and Message_1 not in ('Program: ORDUPL Message: Success Message', 'Program: ORDUP1  Message: Order error')", V.Local.sUploadFile, V.Local.sFilter)
+'		F.Data.DataView.Create("dtOrduplError", "dvORDUPLError", 22, V.Local.sFilter, "")
+'		
+'		'get error message(s)
+'		F.Intrinsic.Control.If(V.DataView.dtOrduplError!dvORDUPLError.RowCount, >, 0)
+'			F.Data.DataView.ToString("dtOrduplError", "dvORDUPLError", "Message_2", "***NODELIMITER***", V.Ambient.NewLine, V.Local.sMessage)
+'		F.Intrinsic.Control.EndIf
+'		F.Data.DataView.Close("dtOrduplError", "dvORDUPLError")
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.Close("dtOrduplError")
+F.Intrinsic.Control.EndIf
+
+'replace with some more user friendly error messages
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0400 Pgm=ORDUP3 GL Account Required, GL Account Missing!", "GL Account not found. Make sure the part exists, has a valid product line, and the product line has a valid GL account, or the customer has an associated GL account, or there is a default sales GL account set up.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0700 Pgm=ORDUP2User 3 Field Required", "Header User field 3 is required because the option to make it required is on. Make sure a User Field 3 is being passed for the order header.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0820 Pgm=ORDUP2Duplicate Order Number", "This order number already exists.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0220 Pgm=ORDUP2 Customer is on Credit Hold:", "This customer is on Credit Hold:", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0230 Pgm=ORDUP1Invalid Line Order Date Must be CCYYMMDD", "Invalid Line Order Date Format. If the date was passed correctly, this likely means the WebImporter file is bad, either due to unexpected newlines or unicode characters.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0230 Pgm=ORDUP1Invalid Promise Order Date Must be CCYYMMDD", "Invalid Line Promise Date Format. If the date was passed correctly, this likely means the WebImporter file is bad, either due to unexpected newlines or unicode characters.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0210 Pgm=ORDUP1Invalid Transaction, must be O(der), Q(uote)", "Invalid Transaction Code. Only O for Order and Q for Quote are accepted. If the transaction code was passed correctly, this likely means the WebImporter file is bad, either due to unexpected newlines or unicode characters.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0210 Pgm=ORDUP1Missing Part Number", "No Part number passed. If the part number was passed correctly, this likely means the WebImporter file is bad, either due to unexpected newlines or unicode characters.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0210 Pgm=ORDUP1Invalid Prospect, not found", "This customer/prospect does not exist.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0210 Pgm=ORDUP1Invalid Customer, not found", "This customer/prospect does not exist.", V.Local.sMessage)
+F.Intrinsic.String.Replace(V.Local.sMessage, "ERROR: Par=0800 Pgm=ORDUP2Duplicate Quote Number", "This quote number already exists.", V.Local.sMessage)
+F.Intrinsic.Variable.AddRV("ORDUPL_UPLOAD_FILE", V.Local.sUploadFile)
+F.Intrinsic.Variable.AddRV("ORDUPL_ERROR", V.Local.sMessage)
+
+'f.Intrinsic.String.Build("PO# {0}", v.DataTable.dtUpload(0).CUSTPO!FieldValTrim, v.Local.sPO)
+'f.Intrinsic.UI.Msgbox(v.Local.sMessage, v.Local.sPO)
+
+'add records to Log table
+f.Intrinsic.String.Build("{0} {1}", v.Ambient.Now.FormatMM/DD/YYYY, v.Ambient.Now.FormatHH:NN:SS, v.Local.sTimeStamp)
+f.Data.DataTable.AddRow("dtLog", "PO_NUMBER", v.DataTable.dtUpload(0).CUSTPO!FieldValTrim, "MESSAGE", v.Local.sMessage, "USER", v.Caller.User, "TIMESTAMP", v.Local.sTimeStamp, "PASSED_FAILED", v.Local.sPassedFailed)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetORDUPLErrorMessage.End
+
+
+'Read file
+'separate orders by CustomerPO 
+'upload each Order
+Program.Sub.cmdUpload_Click.Start
+F.Intrinsic.Control.Try
+
+	gui.frmUpload..Enabled(False)
+
+	V.Local.sFieldNames.Declare(String)
+	V.Local.sFilePath.Declare(String)
+	V.Local.sTypes.Declare(String)
+	v.Local.sFilter.Declare(String)
+	v.Local.iCount.Declare(Long)
+	v.Local.sSQL.Declare(String)
+	v.Local.sCustomerPO.Declare(String)
+	v.Local.sReportFile.Declare(String)
+	v.Local.bExists.Declare(Boolean)
+	
+	v.Local.sRet.Declare(String)
+	v.Local.sFirstSheet.Declare(String)
+	
+	v.Local.bContainSlash.Declare(Boolean)
+	v.Local.sTimeStamp.Declare(String)
+	v.Local.iCount_Line.Declare(Long)
+	v.Local.sMessage.Declare(String)
+	v.Local.sPartRev.Declare(String)
+	
+	v.Local.bErrorFree.Declare(Boolean)
+	
+	
+	V.Local.sFilePath.Set(v.Screen.frmUpload!txtfile.Text)
+	F.Intrinsic.Control.If(V.Local.sFilePath.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("No File Was Selected")
+		f.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.UI.InvokeWaitDialog("Importing data...","Please Wait...")
+
+
+'sep 29 - replace with excel file
+'----------------------------------------------
+	V.Local.sFieldNames.Set("CUSTOMER*!*SHIPTO*!*CUSTPO*!*PO_LINE*!*CONTACT*!*CONTACTEMAIL*!*CONTACTPHONE*!*CARRIER*!*MARKSHIP*!*UF1*!*UF2*!*UF3*!*UF4*!*PART*!*REV*!*DESC*!*QTYORD*!*PROMDATE*!*PRICE")
+	V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String")
+
+'	V.Local.sFilePath.Set(v.Screen.frmUpload!txtfile.Text)
+'	Function.Data.DataTable.CreateFromCSV("dtOrderRaw",V.Local.sFilePath,V.Local.sFieldNames,V.Local.sTypes,true)
+	
+	f.Automation.MSExcel.ReadSpreadsheet(V.Local.sFilePath, v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet, "&^&", v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet(0), "$!$", v.Local.sFirstSheet)
+	v.Local.sFirstSheet(0).Set("REMOVEDHEADER")
+	f.Intrinsic.String.Join(v.Local.sFirstSheet, "$!$", v.Local.sFirstSheet)
+	f.Intrinsic.String.Replace(v.Local.sFirstSheet, "REMOVEDHEADER$!$", "", v.Local.sFirstSheet)
+	f.Data.Datatable.CreateFromString("dtOrderRaw", v.Local.sFirstSheet, v.Local.sFieldNames, v.Local.sTypes, "*!*", "$!$")
+'----------------------------------------------
+
+
+	f.Intrinsic.Control.If(v.DataTable.dtOrderRaw.RowCount,>,0)
+		'delete header line
+'		Function.Data.DataTable.DeleteRow("dtOrderRaw",0)
+		
+		'get list of Customer PO
+		f.Data.DataView.Create("dtOrderRaw", "dvRaw", 22)
+		f.Intrinsic.Control.If(v.DataTable.dtCustomerPO.Exists)
+			f.Data.DataTable.Close("dtCustomerPO")
+		f.Intrinsic.Control.EndIf
+		f.Data.DataView.ToDataTableDistinct("dtOrderRaw", "dvRaw", "dtCustomerPO", "CUSTPO", True)
+		f.Data.DataView.Close("dtOrderRaw", "dvRaw")
+		
+		'add line number
+		f.Data.DataTable.AddColumn("dtOrderRaw", "Line", Float)
+		f.Data.DataTable.SetSeries("dtOrderRaw", "Line", 2,1)
+		
+		'separate Order Lines by Customer PO
+		f.Intrinsic.Control.If(v.DataTable.dtCustomerPO.RowCount,>,0)
+		
+		'add Log table
+		f.Intrinsic.Control.If(v.DataTable.dtLog.Exists)
+			f.Data.DataTable.Close("dtLog")
+		f.Intrinsic.Control.EndIf
+		f.Data.DataTable.Create("dtLog", True)
+		f.Data.DataTable.AddColumn("dtLog", "PO_NUMBER", "String")
+		f.Data.DataTable.AddColumn("dtLog", "PASSED_FAILED", "String")
+		f.Data.DataTable.AddColumn("dtLog", "MESSAGE", "String")
+		f.Data.DataTable.AddColumn("dtLog", "USER", "String")
+		f.Data.DataTable.AddColumn("dtLog", "TIMESTAMP", "String")
+			
+			'upload and log
+			f.Intrinsic.Control.For(v.Local.iCount, 0,v.DataTable.dtCustomerPO.RowCount--,1)
+				f.Intrinsic.String.Build("Working on PO#{0}", v.DataTable.dtCustomerPO(v.Local.iCount).CUSTPO!FieldVal, v.Local.sFilter)
+				f.Intrinsic.UI.ChangeWaitStatus(v.Local.sFilter)
+				
+'				f.Intrinsic.Control.If(v.Local.iCount,=,0)
+'					f.Intrinsic.String.Build("'{0}'", v.DataTable.dtCustomerPO(v.Local.iCount).CUSTPO!FieldVal, v.Local.sCustomerPO)
+'				f.Intrinsic.Control.Else
+'					f.Intrinsic.String.Build("{0},'{1}'", v.Local.sCustomerPO, v.DataTable.dtCustomerPO(v.Local.iCount).CUSTPO!FieldVal, v.Local.sCustomerPO)
+'				f.Intrinsic.Control.EndIf
+				
+				f.Intrinsic.String.Build("CUSTPO='{0}'", v.DataTable.dtCustomerPO(v.Local.iCount).CUSTPO!FieldVal, v.Local.sFilter)
+				f.Data.DataView.Create("dtOrderRaw", "dvOrderByCustPO", 22, v.Local.sFilter, "")
+				f.Intrinsic.Control.If(v.DataTable.dtUpload.Exists)
+					f.Data.DataTable.Close("dtUpload")
+				f.Intrinsic.Control.EndIf
+				f.Data.DataView.ToDataTable("dtOrderRaw", "dvOrderByCustPO", "dtUpload", True)
+				f.Data.DataView.Close("dtOrderRaw", "dvOrderByCustPO")
+				
+				
+				'check for bad data
+				'-----------------------------------------------------
+				'add checks here if any
+				'	check 1: if CUSTPO contains \ then log as FAILED and go next iCount
+				'	check 2: if CUSTOMER length is less than 6 then log as FAILED and go next iCount
+				'	check 3: if PART does not exist, log as FAILED and go next
+				v.Local.bErrorFree.Set(True)
+				
+				f.Intrinsic.Control.For(v.Local.iCount_Line,0, v.DataTable.dtUpload.RowCount--,1)
+					f.Intrinsic.String.Build("{0} {1}", v.Ambient.Now.FormatMM/DD/YYYY, v.Ambient.Now.FormatHH:NN:SS, v.Local.sTimeStamp)
+					
+					'PO contains backslash
+					v.Local.bContainSlash.Set(False)
+					f.Intrinsic.String.IsInString(v.DataTable.dtUpload(v.Local.iCount_Line).CUSTPO!FieldValTrim, "\", False, v.Local.bContainSlash)
+					f.Intrinsic.Control.If(v.Local.bContainSlash,=,True)
+						f.Intrinsic.String.Build("Line {0}: {1}", v.DataTable.dtUpload(v.Local.iCount_Line).LINE!FieldVal,"PO Number contains special character", v.Local.sMessage)
+						f.Data.DataTable.AddRow("dtLog", "PO_NUMBER", v.DataTable.dtUpload(v.Local.iCount_Line).CUSTPO!FieldValTrim, "MESSAGE", v.Local.sMessage, "USER", v.Caller.User, "TIMESTAMP", v.Local.sTimeStamp, "PASSED_FAILED", "Failed or Warnings")
+						v.Local.bErrorFree.Set(False)
+					f.Intrinsic.Control.EndIf
+					
+					'CUSTOMER does not exist
+					f.Intrinsic.String.Build("select top 1 * from V_CUSTOMER_MASTER where RTRIM(CUSTOMER)='{0}'", v.DataTable.dtUpload(v.Local.iCount_Line).CUSTOMER!FieldValtrim, v.Local.sSQL)
+					f.ODBC.Connection!Con.OpenCompanyConnection
+					f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+					f.ODBC.Connection!Con.Close
+					f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF)
+						f.Intrinsic.String.Build("Line {0}: Customer#{1} Does Not Exist.", v.DataTable.dtUpload(v.Local.iCount_Line).LINE!FieldVal,v.DataTable.dtUpload(v.Local.iCount_Line).CUSTOMER!FieldVal, v.Local.sMessage)
+						f.Data.DataTable.AddRow("dtLog", "PO_NUMBER", v.DataTable.dtUpload(v.Local.iCount_Line).CUSTPO!FieldValTrim, "MESSAGE", v.Local.sMessage, "USER", v.Caller.User, "TIMESTAMP", v.Local.sTimeStamp, "PASSED_FAILED", "Failed or Warnings")
+						v.Local.bErrorFree.Set(False)
+					f.Intrinsic.Control.EndIf
+					
+					'PART does not exist
+					f.Intrinsic.String.RPad(v.DataTable.dtUpload(v.Local.iCount_Line).PART!FieldValtrim," ", 17, v.Local.sPartRev)
+					f.Intrinsic.String.Build("{0}{1}", v.Local.sPartRev, v.DataTable.dtUpload(v.Local.iCount_Line).REV!FieldValtrim, v.Local.sPartRev)
+					f.Intrinsic.String.Build("select top 1 * from V_INVENTORY_MSTR where RTRIM(PART)='{0}'", v.Local.sPartRev, v.Local.sSQL)
+					f.ODBC.Connection!Con.OpenCompanyConnection
+					f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRet)
+					f.ODBC.Connection!Con.Close
+					f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF)
+						f.Intrinsic.String.Build("Line {0}: PART#{1}; REV#{2} Does Not Exist.", v.DataTable.dtUpload(v.Local.iCount_Line).LINE!FieldVal,v.DataTable.dtUpload(v.Local.iCount_Line).PART!FieldValTrim, v.DataTable.dtUpload(v.Local.iCount_Line).REV!FieldValTrim, v.Local.sMessage)
+						f.Data.DataTable.AddRow("dtLog", "PO_NUMBER", v.DataTable.dtUpload(v.Local.iCount_Line).CUSTPO!FieldValTrim, "MESSAGE", v.Local.sMessage, "USER", v.Caller.User, "TIMESTAMP", v.Local.sTimeStamp, "PASSED_FAILED", "Failed or Warnings")
+						v.Local.bErrorFree.Set(False)
+					f.Intrinsic.Control.EndIf
+				f.Intrinsic.Control.Next(v.Local.iCount_Line)
+				
+				'-----------------------------------------------------
+				
+				f.Intrinsic.Control.If(v.Local.bErrorFree)
+					f.Intrinsic.Control.CallSub(UploadOrder)
+				f.Intrinsic.Control.EndIf
+				
+			f.Intrinsic.Control.Next(v.Local.iCount)
+			
+			'check upload result
+'			f.Intrinsic.String.Build("{0}\CUSTOM\6899\", v.Caller.GlobalDir, v.Local.sReportFile)
+'			f.Intrinsic.File.DirExists(v.Local.sReportFile, v.Local.bExists)
+'			f.Intrinsic.Control.If(v.Local.bExists,=,False)
+'				f.Intrinsic.File.CreateDir(v.Local.sReportFile)
+'			f.Intrinsic.Control.EndIf
+'			
+'			f.Intrinsic.String.Build("{0}\Upload at {1} {2}_{3}.csv", v.Local.sReportFile, v.Ambient.Now.FormatYYYYMMDD, v.Ambient.Now.FormatHHNNSS, v.Caller.User, v.Local.sReportFile)
+'			f.ODBC.Connection!Con.OpenCompanyConnection
+'			f.Intrinsic.String.Build("select RTRIM(A.CUSTOMER_PO), A.ORDER_NO from V_ORDER_HEADER A where RTRIM(A.CUSTOMER_PO) in ({0}) and A.ORDER_NO = (select MAX(REF.ORDER_NO) from V_ORDER_HEADER REF where A.CUSTOMER_PO = REF.CUSTOMER_PO)", v.Local.sCustomerPO, v.Local.sSQL)
+'			f.Data.Dictionary.CreateFromSQL("dictResult", "con", v.Local.sSQL)
+'			f.ODBC.Connection!Con.Close
+'			f.Data.Dictionary.SetDefaultReturn("dictResult","UPLOAD FAIL")
+'			f.Data.DataTable.AddColumn("dtCustomerPO", "SALES_ORDER", String)
+'			f.Data.DataTable.FillFromDictionary("dtCustomerPO", "dictResult", "CUSTPO", "SALES_ORDER")
+'			f.Data.DataTable.SaveToCSV("dtCustomerPO", v.Local.sReportFile, True)
+
+			f.Intrinsic.Control.CallSub(PopulateLogView)
+
+		f.Intrinsic.Control.EndIf
+		
+	f.Intrinsic.Control.EndIf
+	
+'	gui.frmUpload..Enabled(True)
+'	f.Intrinsic.Control.CallSub(frmUpload_UnLoad)
+
+	'show form finish
+	f.Intrinsic.Control.CallSub(LoadFormFinish)
+
+f.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(ErrorMsg,"Sub",V.Ambient.CurrentSubroutine,"ErrNo",V.Ambient.ErrorNumber,"ErrDesc",V.Ambient.ErrorDescription)
+	f.Intrinsic.Control.EndTry
+Program.Sub.cmdUpload_Click.End
+
+Program.Sub.PopulateLogView.Start
+f.Intrinsic.Control.Try
+	v.Local.sReportFile.Declare(String)
+	
+	gui.FormLog.GsGcLog.AddGridviewFromDatatable("gvLog", "dtLog")
+	
+	gui.FormLog.GsGcLog.SetGridviewProperty("gvLog", v.Enum.GridViewPropertyNames!Editable, False)
+	gui.FormLog.GsGcLog.SetGridviewProperty("gvLog", v.Enum.GridViewPropertyNames!ReadOnly, True)
+	
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PASSED_FAILED", v.Enum.ColumnPropertyNames!Caption, "PASSED/FAILED")
+	
+	
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PO_NUMBER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "MESSAGE", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "USER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "TIMESTAMP", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PASSED_FAILED", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PO_NUMBER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "MESSAGE", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "USER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "TIMESTAMP", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PASSED_FAILED", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PO_NUMBER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "USER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PASSED_FAILED", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PO_NUMBER", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "MESSAGE", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "USER", v.Enum.ColumnPropertyNames!MinWidth, 80)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "TIMESTAMP", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PASSED_FAILED", v.Enum.ColumnPropertyNames!MinWidth, 120)
+	
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PO_NUMBER", v.Enum.ColumnPropertyNames!VisibleIndex, 0)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "MESSAGE", v.Enum.ColumnPropertyNames!VisibleIndex, 2)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "USER", v.Enum.ColumnPropertyNames!VisibleIndex, 3)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "TIMESTAMP", v.Enum.ColumnPropertyNames!VisibleIndex, 4)
+	gui.FormLog.GsGcLog.SetColumnProperty("gvLog", "PASSED_FAILED", v.Enum.ColumnPropertyNames!VisibleIndex, 1)
+	
+	gui.FormLog.GsGcLog.MainView("gvLog")
+	
+	'export
+	v.Local.sReportFile.Set("\\s0419\Logs\Sales Order Import")
+	
+	'TEST ENVIRONMENT
+'	v.Local.sReportFile.Set("C:\Users\nle\Desktop\My Projects\6899 - DEWYS\Report")
+	
+	f.Intrinsic.String.Build("{0}\Order Import Log at {1} {2}_{3}.xls", v.Local.sReportFile, v.Ambient.Now.FormatYYYYMMDD, v.Ambient.Now.FormatHHNNSS, v.Caller.User, v.Local.sReportFile)
+	gui.FormLog.GsGcLog.Export(v.Local.sReportFile, "xls")
+
+f.Intrinsic.Control.Catch
+f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.PopulateLogView.End
+
+Program.Sub.LoadFormFinish.Start
+f.Intrinsic.Control.Try
+	v.Local.sPassed.Declare(String)
+	v.Local.sFailed.Declare(String)
+	v.Local.sTemp.Declare(String)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtLog.RowCount,=,0)
+		f.Intrinsic.UI.Msgbox("No Orders to Upload")
+		f.Intrinsic.Control.End
+	f.Intrinsic.Control.Else
+		'count passed
+		v.Local.sTemp.Set("")
+		f.Data.DataTable.Select("dtLog", "PASSED_FAILED='Passed'", v.Local.sTemp)
+		f.Intrinsic.Control.If(v.Local.sTemp,!=,"***NORETURN***")
+			f.Intrinsic.String.Split(v.Local.sTemp, "*!*", v.Local.sTemp)
+			v.Local.sPassed.Set(v.Local.sTemp.UBound++)
+		f.Intrinsic.Control.Else
+			v.Local.sPassed.Set("0")
+		f.Intrinsic.Control.EndIf
+		
+		'count failed
+		v.Local.sTemp.Set("")
+		f.Data.DataTable.Select("dtLog", "PASSED_FAILED='Failed or Warnings'", v.Local.sTemp)
+		f.Intrinsic.Control.If(v.Local.sTemp,!=,"***NORETURN***")
+			f.Intrinsic.String.Split(v.Local.sTemp, "*!*", v.Local.sTemp)
+			v.Local.sFailed.Set(v.Local.sTemp.UBound++)
+		f.Intrinsic.Control.Else
+			v.Local.sFailed.Set("0")
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	gui.FormFinish.lblPassed.Caption(v.Local.sPassed)
+	gui.FormFinish.lblFailed.Caption(v.Local.sFailed)
+	gui.FormFinish..Visible(True)
+f.Intrinsic.Control.Catch
+f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadFormFinish.End
+
+Program.Sub.cmdViewLog_Click.Start
+	gui.FormFinish..Enabled(False)
+	gui.FormLog..Visible(True)
+Program.Sub.cmdViewLog_Click.End
+
+Program.Sub.FormFinish_UnLoad.Start
+f.Intrinsic.Control.End
+Program.Sub.FormFinish_UnLoad.End
+
+Program.Sub.FormLog_UnLoad.Start
+f.Intrinsic.Control.End
+Program.Sub.FormLog_UnLoad.End
+
+Program.Sub.cmdExit_Click.Start
+f.Intrinsic.Control.End
+Program.Sub.cmdExit_Click.End
+
+Program.Sub.cmdOpenLogFolder_Click.Start
+f.Intrinsic.Control.Try
+	v.Local.sReportFile.Declare(String)
+	v.Local.sReportFile.Set("\\s0419\Logs\Sales Order Import")
+	F.Intrinsic.Task.ShellExec(0,"Open",v.Local.sReportFile,"","",0)
+f.Intrinsic.Control.Catch
+f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdOpenLogFolder_Click.End
+
+Program.Sub.cmdOpenfolderFromLog_Click.Start
+Program.Sub.cmdOpenfolderFromLog_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$nle$}$20221107090825212$}$kjzCRYkA6UEoRnCwndYnRSKT8t/BDwvKaxLQaIAiR2y9h4awKtLTPd6ln+nfs0zM
+Program.Sub.Comments.End
